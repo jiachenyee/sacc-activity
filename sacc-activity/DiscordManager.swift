@@ -11,6 +11,10 @@ import AsyncHTTPClient
 
 class DiscordManager: ObservableObject {
     
+    let discordInfo = DiscordInfo.getInformation()
+    
+    var bot: BotGatewayManager?
+    
     init() {
         Task.detached {
             await self.initialize()
@@ -19,11 +23,9 @@ class DiscordManager: ObservableObject {
     
     func initialize() async {
         
-        let discordInfo = DiscordInfo.getInformation()
-        
         let httpClient = HTTPClient(eventLoopGroupProvider: .singleton)
-        
-        let bot = await BotGatewayManager(
+
+        self.bot = await BotGatewayManager(
             eventLoopGroup: httpClient.eventLoopGroup,
             httpClient: httpClient,
             token: discordInfo.token,
@@ -31,13 +33,10 @@ class DiscordManager: ObservableObject {
                 activities: [.init(name: "YJ teach Swift Accelerator classes", type: .listening)],
                 status: .online,
                 afk: false),
-            /// Add all the intents you want
-            /// You can also use `Gateway.Intent.unprivileged` or `Gateway.Intent.allCases`
             intents: Gateway.Intent.allCases
         )
         
-        Task {
-            await bot.connect()
-        }
+        await bot?.connect()
+        await setUpSlashCommands()
     }
 }

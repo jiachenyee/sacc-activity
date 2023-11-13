@@ -10,6 +10,8 @@ import Foundation
 struct DiscordInfo: Codable {
     var token: String
     var applicationId: String
+    var loggingChannel: String
+    var guildId: String
     
     static func getInformation() -> Self {
         let path = Bundle.main.path(forResource: "Discord", ofType: "plist")!
