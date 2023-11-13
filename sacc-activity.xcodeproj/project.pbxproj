@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		327129BC2B0255BA001CE562 /* DiscordAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 327129BB2B0255BA001CE562 /* DiscordAuth */; };
+		327129BE2B0255BA001CE562 /* DiscordBM in Frameworks */ = {isa = PBXBuildFile; productRef = 327129BD2B0255BA001CE562 /* DiscordBM */; };
+		327129C02B0255BA001CE562 /* DiscordCore in Frameworks */ = {isa = PBXBuildFile; productRef = 327129BF2B0255BA001CE562 /* DiscordCore */; };
+		327129C22B0255BA001CE562 /* DiscordGateway in Frameworks */ = {isa = PBXBuildFile; productRef = 327129C12B0255BA001CE562 /* DiscordGateway */; };
+		327129C42B0255BA001CE562 /* DiscordHTTP in Frameworks */ = {isa = PBXBuildFile; productRef = 327129C32B0255BA001CE562 /* DiscordHTTP */; };
+		327129C62B0255BA001CE562 /* DiscordModels in Frameworks */ = {isa = PBXBuildFile; productRef = 327129C52B0255BA001CE562 /* DiscordModels */; };
+		327129C82B0255BA001CE562 /* DiscordUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 327129C72B0255BA001CE562 /* DiscordUtilities */; };
+		327129CA2B0255D5001CE562 /* Discord.plist in Resources */ = {isa = PBXBuildFile; fileRef = 327129C92B0255D5001CE562 /* Discord.plist */; };
+		327129CC2B025614001CE562 /* DiscordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327129CB2B025614001CE562 /* DiscordManager.swift */; };
+		327129CE2B025826001CE562 /* DiscordInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327129CD2B025826001CE562 /* DiscordInfo.swift */; };
 		32F84EAC2B01E6D00068BFE6 /* sacc_activityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F84EAB2B01E6D00068BFE6 /* sacc_activityApp.swift */; };
 		32F84EAE2B01E6D00068BFE6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F84EAD2B01E6D00068BFE6 /* ContentView.swift */; };
 		32F84EB02B01E6D10068BFE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32F84EAF2B01E6D10068BFE6 /* Assets.xcassets */; };
@@ -14,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		327129C92B0255D5001CE562 /* Discord.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Discord.plist; sourceTree = "<group>"; };
+		327129CB2B025614001CE562 /* DiscordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscordManager.swift; sourceTree = "<group>"; };
+		327129CD2B025826001CE562 /* DiscordInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscordInfo.swift; sourceTree = "<group>"; };
 		32F84EA82B01E6D00068BFE6 /* sacc-activity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sacc-activity.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32F84EAB2B01E6D00068BFE6 /* sacc_activityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sacc_activityApp.swift; sourceTree = "<group>"; };
 		32F84EAD2B01E6D00068BFE6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,6 +40,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				327129C42B0255BA001CE562 /* DiscordHTTP in Frameworks */,
+				327129C82B0255BA001CE562 /* DiscordUtilities in Frameworks */,
+				327129C62B0255BA001CE562 /* DiscordModels in Frameworks */,
+				327129C22B0255BA001CE562 /* DiscordGateway in Frameworks */,
+				327129C02B0255BA001CE562 /* DiscordCore in Frameworks */,
+				327129BE2B0255BA001CE562 /* DiscordBM in Frameworks */,
+				327129BC2B0255BA001CE562 /* DiscordAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +74,9 @@
 			children = (
 				32F84EAB2B01E6D00068BFE6 /* sacc_activityApp.swift */,
 				32F84EAD2B01E6D00068BFE6 /* ContentView.swift */,
+				327129CB2B025614001CE562 /* DiscordManager.swift */,
+				327129CD2B025826001CE562 /* DiscordInfo.swift */,
+				327129C92B0255D5001CE562 /* Discord.plist */,
 				32F84EAF2B01E6D10068BFE6 /* Assets.xcassets */,
 				32F84EB42B01E6D10068BFE6 /* sacc_activity.entitlements */,
 				32F84EB12B01E6D10068BFE6 /* Preview Content */,
@@ -85,6 +108,15 @@
 			dependencies = (
 			);
 			name = "sacc-activity";
+			packageProductDependencies = (
+				327129BB2B0255BA001CE562 /* DiscordAuth */,
+				327129BD2B0255BA001CE562 /* DiscordBM */,
+				327129BF2B0255BA001CE562 /* DiscordCore */,
+				327129C12B0255BA001CE562 /* DiscordGateway */,
+				327129C32B0255BA001CE562 /* DiscordHTTP */,
+				327129C52B0255BA001CE562 /* DiscordModels */,
+				327129C72B0255BA001CE562 /* DiscordUtilities */,
+			);
 			productName = "sacc-activity";
 			productReference = 32F84EA82B01E6D00068BFE6 /* sacc-activity.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +145,9 @@
 				Base,
 			);
 			mainGroup = 32F84E9F2B01E6D00068BFE6;
+			packageReferences = (
+				327129BA2B0255BA001CE562 /* XCRemoteSwiftPackageReference "DiscordBM" */,
+			);
 			productRefGroup = 32F84EA92B01E6D00068BFE6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				327129CA2B0255D5001CE562 /* Discord.plist in Resources */,
 				32F84EB32B01E6D10068BFE6 /* Preview Assets.xcassets in Resources */,
 				32F84EB02B01E6D10068BFE6 /* Assets.xcassets in Resources */,
 			);
@@ -139,6 +175,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				327129CE2B025826001CE562 /* DiscordInfo.swift in Sources */,
+				327129CC2B025614001CE562 /* DiscordManager.swift in Sources */,
 				32F84EAE2B01E6D00068BFE6 /* ContentView.swift in Sources */,
 				32F84EAC2B01E6D00068BFE6 /* sacc_activityApp.swift in Sources */,
 			);
@@ -341,6 +379,55 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		327129BA2B0255BA001CE562 /* XCRemoteSwiftPackageReference "DiscordBM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DiscordBM/DiscordBM";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		327129BB2B0255BA001CE562 /* DiscordAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 327129BA2B0255BA001CE562 /* XCRemoteSwiftPackageReference "DiscordBM" */;
+			productName = DiscordAuth;
+		};
+		327129BD2B0255BA001CE562 /* DiscordBM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 327129BA2B0255BA001CE562 /* XCRemoteSwiftPackageReference "DiscordBM" */;
+			productName = DiscordBM;
+		};
+		327129BF2B0255BA001CE562 /* DiscordCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 327129BA2B0255BA001CE562 /* XCRemoteSwiftPackageReference "DiscordBM" */;
+			productName = DiscordCore;
+		};
+		327129C12B0255BA001CE562 /* DiscordGateway */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 327129BA2B0255BA001CE562 /* XCRemoteSwiftPackageReference "DiscordBM" */;
+			productName = DiscordGateway;
+		};
+		327129C32B0255BA001CE562 /* DiscordHTTP */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 327129BA2B0255BA001CE562 /* XCRemoteSwiftPackageReference "DiscordBM" */;
+			productName = DiscordHTTP;
+		};
+		327129C52B0255BA001CE562 /* DiscordModels */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 327129BA2B0255BA001CE562 /* XCRemoteSwiftPackageReference "DiscordBM" */;
+			productName = DiscordModels;
+		};
+		327129C72B0255BA001CE562 /* DiscordUtilities */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 327129BA2B0255BA001CE562 /* XCRemoteSwiftPackageReference "DiscordBM" */;
+			productName = DiscordUtilities;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 32F84EA02B01E6D00068BFE6 /* Project object */;
 }
