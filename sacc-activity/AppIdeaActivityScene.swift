@@ -43,7 +43,7 @@ struct AppIdeaActivityScene: ActivityScene {
                          title: "Brief: Prizes",
                          state: .pointers([
                             Pointer(systemName: "medal.fill", title: "Most Random Words Used", color: .yellow),
-                            Pointer(systemName: "medal.fill", title: "Most Ridiculous Idea", color: .yellow, subtitle: "As judged by YJ")
+                            Pointer(systemName: "medal.fill", title: "Most Ridiculous Idea", color: .yellow, subtitle: "Judged by YJ")
                          ])),
         ActivitySubscene(systemImage: "text.redaction",
                          title: "Words List",
