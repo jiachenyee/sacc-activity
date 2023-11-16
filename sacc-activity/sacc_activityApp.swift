@@ -9,10 +9,19 @@ import SwiftUI
 
 @main
 struct sacc_activityApp: App {
+    
+    @StateObject var discordManager = DiscordManager()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DashboardView()
                 .preferredColorScheme(.dark)
+                .environmentObject(discordManager)
+        }
+        
+        WindowGroup(id: "presentation-view") {
+            PresentationView()
+                .environmentObject(discordManager)
         }
     }
 }

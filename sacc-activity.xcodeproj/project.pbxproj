@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		324E1EB12B06793400E57028 /* PresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324E1EB02B06793400E57028 /* PresentationView.swift */; };
+		324E1EB62B067AC300E57028 /* ActivityTitlePresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324E1EB52B067AC300E57028 /* ActivityTitlePresentationView.swift */; };
+		324E1EB82B067BC900E57028 /* SectionPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324E1EB72B067BC900E57028 /* SectionPresentationView.swift */; };
+		324E1EBA2B067C9500E57028 /* PointersPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324E1EB92B067C9500E57028 /* PointersPresentationView.swift */; };
+		324E1EBC2B067E7600E57028 /* StatementPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324E1EBB2B067E7600E57028 /* StatementPresentationView.swift */; };
+		324E1EBE2B067F6600E57028 /* WelcomeActivityScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324E1EBD2B067F6600E57028 /* WelcomeActivityScene.swift */; };
+		324E1EC02B068C4200E57028 /* ImagePresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324E1EBF2B068C4200E57028 /* ImagePresentationView.swift */; };
+		324E1EC32B06944200E57028 /* ActivitySceneDashboardItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324E1EC22B06944200E57028 /* ActivitySceneDashboardItemButton.swift */; };
+		324E1EC52B06ADC600E57028 /* TimerPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324E1EC42B06ADC600E57028 /* TimerPresentationView.swift */; };
+		324E1EC72B06B69E00E57028 /* WordsPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324E1EC62B06B69E00E57028 /* WordsPresentationView.swift */; };
+		324E1ECA2B06B84300E57028 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 324E1EC92B06B84300E57028 /* Algorithms */; };
+		324E1ECC2B06BF2D00E57028 /* FlagRaisingLeaderboardPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324E1ECB2B06BF2D00E57028 /* FlagRaisingLeaderboardPresentationView.swift */; };
 		327129BC2B0255BA001CE562 /* DiscordAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 327129BB2B0255BA001CE562 /* DiscordAuth */; };
 		327129BE2B0255BA001CE562 /* DiscordBM in Frameworks */ = {isa = PBXBuildFile; productRef = 327129BD2B0255BA001CE562 /* DiscordBM */; };
 		327129C02B0255BA001CE562 /* DiscordCore in Frameworks */ = {isa = PBXBuildFile; productRef = 327129BF2B0255BA001CE562 /* DiscordCore */; };
@@ -18,20 +30,43 @@
 		327129CC2B025614001CE562 /* DiscordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327129CB2B025614001CE562 /* DiscordManager.swift */; };
 		327129CE2B025826001CE562 /* DiscordInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327129CD2B025826001CE562 /* DiscordInfo.swift */; };
 		327129D02B025CBE001CE562 /* DiscordManager+SlashCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327129CF2B025CBE001CE562 /* DiscordManager+SlashCommands.swift */; };
+		327129D22B03DADC001CE562 /* ActivityScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327129D12B03DADC001CE562 /* ActivityScene.swift */; };
+		327129D42B03DC43001CE562 /* FlagCreationActivityScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327129D32B03DC43001CE562 /* FlagCreationActivityScene.swift */; };
+		327129D62B03DC82001CE562 /* AppIdeaActivityScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327129D52B03DC82001CE562 /* AppIdeaActivityScene.swift */; };
+		327129D82B03DCD7001CE562 /* TriviaActivityScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327129D72B03DCD7001CE562 /* TriviaActivityScene.swift */; };
+		327129DA2B03E794001CE562 /* ActivitySceneDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327129D92B03E794001CE562 /* ActivitySceneDashboardView.swift */; };
+		327129DC2B03E8D1001CE562 /* SceneState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327129DB2B03E8D1001CE562 /* SceneState.swift */; };
 		32F84EAC2B01E6D00068BFE6 /* sacc_activityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F84EAB2B01E6D00068BFE6 /* sacc_activityApp.swift */; };
-		32F84EAE2B01E6D00068BFE6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F84EAD2B01E6D00068BFE6 /* ContentView.swift */; };
+		32F84EAE2B01E6D00068BFE6 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F84EAD2B01E6D00068BFE6 /* DashboardView.swift */; };
 		32F84EB02B01E6D10068BFE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32F84EAF2B01E6D10068BFE6 /* Assets.xcassets */; };
 		32F84EB32B01E6D10068BFE6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32F84EB22B01E6D10068BFE6 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		324E1EB02B06793400E57028 /* PresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationView.swift; sourceTree = "<group>"; };
+		324E1EB52B067AC300E57028 /* ActivityTitlePresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTitlePresentationView.swift; sourceTree = "<group>"; };
+		324E1EB72B067BC900E57028 /* SectionPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionPresentationView.swift; sourceTree = "<group>"; };
+		324E1EB92B067C9500E57028 /* PointersPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointersPresentationView.swift; sourceTree = "<group>"; };
+		324E1EBB2B067E7600E57028 /* StatementPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementPresentationView.swift; sourceTree = "<group>"; };
+		324E1EBD2B067F6600E57028 /* WelcomeActivityScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeActivityScene.swift; sourceTree = "<group>"; };
+		324E1EBF2B068C4200E57028 /* ImagePresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePresentationView.swift; sourceTree = "<group>"; };
+		324E1EC22B06944200E57028 /* ActivitySceneDashboardItemButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySceneDashboardItemButton.swift; sourceTree = "<group>"; };
+		324E1EC42B06ADC600E57028 /* TimerPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPresentationView.swift; sourceTree = "<group>"; };
+		324E1EC62B06B69E00E57028 /* WordsPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsPresentationView.swift; sourceTree = "<group>"; };
+		324E1ECB2B06BF2D00E57028 /* FlagRaisingLeaderboardPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagRaisingLeaderboardPresentationView.swift; sourceTree = "<group>"; };
 		327129C92B0255D5001CE562 /* Discord.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Discord.plist; sourceTree = "<group>"; };
 		327129CB2B025614001CE562 /* DiscordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscordManager.swift; sourceTree = "<group>"; };
 		327129CD2B025826001CE562 /* DiscordInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscordInfo.swift; sourceTree = "<group>"; };
 		327129CF2B025CBE001CE562 /* DiscordManager+SlashCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscordManager+SlashCommands.swift"; sourceTree = "<group>"; };
+		327129D12B03DADC001CE562 /* ActivityScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityScene.swift; sourceTree = "<group>"; };
+		327129D32B03DC43001CE562 /* FlagCreationActivityScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagCreationActivityScene.swift; sourceTree = "<group>"; };
+		327129D52B03DC82001CE562 /* AppIdeaActivityScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIdeaActivityScene.swift; sourceTree = "<group>"; };
+		327129D72B03DCD7001CE562 /* TriviaActivityScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaActivityScene.swift; sourceTree = "<group>"; };
+		327129D92B03E794001CE562 /* ActivitySceneDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySceneDashboardView.swift; sourceTree = "<group>"; };
+		327129DB2B03E8D1001CE562 /* SceneState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneState.swift; sourceTree = "<group>"; };
 		32F84EA82B01E6D00068BFE6 /* sacc-activity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sacc-activity.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32F84EAB2B01E6D00068BFE6 /* sacc_activityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sacc_activityApp.swift; sourceTree = "<group>"; };
-		32F84EAD2B01E6D00068BFE6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		32F84EAD2B01E6D00068BFE6 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		32F84EAF2B01E6D10068BFE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32F84EB22B01E6D10068BFE6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		32F84EB42B01E6D10068BFE6 /* sacc_activity.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sacc_activity.entitlements; sourceTree = "<group>"; };
@@ -46,6 +81,7 @@
 				327129C82B0255BA001CE562 /* DiscordUtilities in Frameworks */,
 				327129C62B0255BA001CE562 /* DiscordModels in Frameworks */,
 				327129C22B0255BA001CE562 /* DiscordGateway in Frameworks */,
+				324E1ECA2B06B84300E57028 /* Algorithms in Frameworks */,
 				327129C02B0255BA001CE562 /* DiscordCore in Frameworks */,
 				327129BE2B0255BA001CE562 /* DiscordBM in Frameworks */,
 				327129BC2B0255BA001CE562 /* DiscordAuth in Frameworks */,
@@ -55,6 +91,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		324E1EB22B067A8D00E57028 /* Presentation View */ = {
+			isa = PBXGroup;
+			children = (
+				324E1EB02B06793400E57028 /* PresentationView.swift */,
+				324E1ECB2B06BF2D00E57028 /* FlagRaisingLeaderboardPresentationView.swift */,
+				324E1EB52B067AC300E57028 /* ActivityTitlePresentationView.swift */,
+				324E1EB72B067BC900E57028 /* SectionPresentationView.swift */,
+				324E1EB92B067C9500E57028 /* PointersPresentationView.swift */,
+				324E1EBB2B067E7600E57028 /* StatementPresentationView.swift */,
+				324E1EBF2B068C4200E57028 /* ImagePresentationView.swift */,
+				324E1EC42B06ADC600E57028 /* TimerPresentationView.swift */,
+				324E1EC62B06B69E00E57028 /* WordsPresentationView.swift */,
+			);
+			path = "Presentation View";
+			sourceTree = "<group>";
+		};
+		324E1EC12B06914900E57028 /* Dashboard Views */ = {
+			isa = PBXGroup;
+			children = (
+				32F84EAD2B01E6D00068BFE6 /* DashboardView.swift */,
+				327129D92B03E794001CE562 /* ActivitySceneDashboardView.swift */,
+				324E1EC22B06944200E57028 /* ActivitySceneDashboardItemButton.swift */,
+			);
+			path = "Dashboard Views";
+			sourceTree = "<group>";
+		};
 		32F84E9F2B01E6D00068BFE6 = {
 			isa = PBXGroup;
 			children = (
@@ -75,10 +137,17 @@
 			isa = PBXGroup;
 			children = (
 				32F84EAB2B01E6D00068BFE6 /* sacc_activityApp.swift */,
-				32F84EAD2B01E6D00068BFE6 /* ContentView.swift */,
+				324E1EB22B067A8D00E57028 /* Presentation View */,
+				324E1EC12B06914900E57028 /* Dashboard Views */,
+				327129DB2B03E8D1001CE562 /* SceneState.swift */,
 				327129CD2B025826001CE562 /* DiscordInfo.swift */,
 				327129CB2B025614001CE562 /* DiscordManager.swift */,
 				327129CF2B025CBE001CE562 /* DiscordManager+SlashCommands.swift */,
+				327129D12B03DADC001CE562 /* ActivityScene.swift */,
+				324E1EBD2B067F6600E57028 /* WelcomeActivityScene.swift */,
+				327129D32B03DC43001CE562 /* FlagCreationActivityScene.swift */,
+				327129D52B03DC82001CE562 /* AppIdeaActivityScene.swift */,
+				327129D72B03DCD7001CE562 /* TriviaActivityScene.swift */,
 				327129C92B0255D5001CE562 /* Discord.plist */,
 				32F84EAF2B01E6D10068BFE6 /* Assets.xcassets */,
 				32F84EB42B01E6D10068BFE6 /* sacc_activity.entitlements */,
@@ -119,6 +188,7 @@
 				327129C32B0255BA001CE562 /* DiscordHTTP */,
 				327129C52B0255BA001CE562 /* DiscordModels */,
 				327129C72B0255BA001CE562 /* DiscordUtilities */,
+				324E1EC92B06B84300E57028 /* Algorithms */,
 			);
 			productName = "sacc-activity";
 			productReference = 32F84EA82B01E6D00068BFE6 /* sacc-activity.app */;
@@ -150,6 +220,7 @@
 			mainGroup = 32F84E9F2B01E6D00068BFE6;
 			packageReferences = (
 				327129BA2B0255BA001CE562 /* XCRemoteSwiftPackageReference "DiscordBM" */,
+				324E1EC82B06B84300E57028 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
 			);
 			productRefGroup = 32F84EA92B01E6D00068BFE6 /* Products */;
 			projectDirPath = "";
@@ -178,11 +249,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				324E1EBA2B067C9500E57028 /* PointersPresentationView.swift in Sources */,
+				327129DC2B03E8D1001CE562 /* SceneState.swift in Sources */,
+				324E1EC52B06ADC600E57028 /* TimerPresentationView.swift in Sources */,
 				327129CE2B025826001CE562 /* DiscordInfo.swift in Sources */,
+				327129D22B03DADC001CE562 /* ActivityScene.swift in Sources */,
+				324E1EC32B06944200E57028 /* ActivitySceneDashboardItemButton.swift in Sources */,
+				327129DA2B03E794001CE562 /* ActivitySceneDashboardView.swift in Sources */,
 				327129D02B025CBE001CE562 /* DiscordManager+SlashCommands.swift in Sources */,
+				324E1EBC2B067E7600E57028 /* StatementPresentationView.swift in Sources */,
 				327129CC2B025614001CE562 /* DiscordManager.swift in Sources */,
-				32F84EAE2B01E6D00068BFE6 /* ContentView.swift in Sources */,
+				327129D62B03DC82001CE562 /* AppIdeaActivityScene.swift in Sources */,
+				32F84EAE2B01E6D00068BFE6 /* DashboardView.swift in Sources */,
+				324E1EB82B067BC900E57028 /* SectionPresentationView.swift in Sources */,
+				324E1EC72B06B69E00E57028 /* WordsPresentationView.swift in Sources */,
+				324E1EB62B067AC300E57028 /* ActivityTitlePresentationView.swift in Sources */,
+				324E1EB12B06793400E57028 /* PresentationView.swift in Sources */,
+				327129D42B03DC43001CE562 /* FlagCreationActivityScene.swift in Sources */,
+				327129D82B03DCD7001CE562 /* TriviaActivityScene.swift in Sources */,
+				324E1ECC2B06BF2D00E57028 /* FlagRaisingLeaderboardPresentationView.swift in Sources */,
 				32F84EAC2B01E6D00068BFE6 /* sacc_activityApp.swift in Sources */,
+				324E1EC02B068C4200E57028 /* ImagePresentationView.swift in Sources */,
+				324E1EBE2B067F6600E57028 /* WelcomeActivityScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +473,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		324E1EC82B06B84300E57028 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
 		327129BA2B0255BA001CE562 /* XCRemoteSwiftPackageReference "DiscordBM" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/DiscordBM/DiscordBM";
@@ -396,6 +492,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		324E1EC92B06B84300E57028 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 324E1EC82B06B84300E57028 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
 		327129BB2B0255BA001CE562 /* DiscordAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 327129BA2B0255BA001CE562 /* XCRemoteSwiftPackageReference "DiscordBM" */;

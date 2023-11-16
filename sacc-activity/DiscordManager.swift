@@ -11,6 +11,30 @@ import AsyncHTTPClient
 
 class DiscordManager: ObservableObject {
     
+    @Published var activityGroups = (1...9).map {
+        ActivityGroup(groupName: "Group \($0)")
+    }
+    
+    @Published var presentedSceneIDs: Set<UUID> = []
+    
+    @Published var currentScene: ActivitySubscene = .init(systemImage: "", title: "", state: .empty) {
+        didSet {
+            oldValue.onEnd?(self)
+            currentScene.onStart?(self)
+        }
+    }
+    
+    @Published var currentActivitySceneIndex = 0
+    
+    @Published var activeSlashCommand: String?
+    
+    @Published var activityScenes: [any ActivityScene] = [
+        WelcomeActivityScene(),
+        FlagCreationActivityScene(),
+        AppIdeaActivityScene(),
+        TriviaActivityScene()
+    ]
+    
     let discordInfo = DiscordInfo.getInformation()
     
     var bot: BotGatewayManager?
@@ -37,6 +61,57 @@ class DiscordManager: ObservableObject {
         )
         
         await bot?.connect()
+        
         await setUpSlashCommands()
+        
+        for await event in await bot!.events {
+            EventHandler(event: event, client: bot!.client, activeCommand: activeSlashCommand) { interaction in
+                #warning("implement handle after receiving bot info")
+            }.handle()
+        }
+    }
+}
+
+struct EventHandler: GatewayEventHandler, @unchecked Sendable {
+    let event: Gateway.Event
+    let client: any DiscordClient
+    let activeCommand: String?
+    
+    let onSuccess: ((Interaction) -> ())
+    
+    func onInteractionCreate(_ interaction: Interaction) async throws {
+        switch interaction.data {
+        case let .applicationCommand(applicationCommand):
+            guard let channelName = interaction.channel?.name,
+                  channelName.starts(with: "group-") || channelName == "bot-logging" else {
+                try await client.createInteractionResponse(
+                    id: interaction.id,
+                    token: interaction.token,
+                    payload: .channelMessageWithSource(.init(content: "You can only use this command in your group’s channel.",
+                                                             flags: [.ephemeral]))
+                ).guardSuccess()
+                
+                return
+            }
+            guard activeCommand == applicationCommand.name else {
+                try await client.createInteractionResponse(
+                    id: interaction.id,
+                    token: interaction.token,
+                    payload: .channelMessageWithSource(.init(content: "Submission for this activity is not open yet!",
+                                                             flags: [.ephemeral]))
+                ).guardSuccess()
+                
+                return
+            }
+            
+            try await client.createInteractionResponse(
+                id: interaction.id,
+                token: interaction.token,
+                payload: .channelMessageWithSource(.init(content: "Thanks for your submission!\n\nUse this command again to replace the current submission."))
+            ).guardSuccess()
+            
+            onSuccess(interaction)
+        default: break
+        }
     }
 }
