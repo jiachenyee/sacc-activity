@@ -21,6 +21,7 @@
 		324E1ECC2B06BF2D00E57028 /* FlagRaisingLeaderboardPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324E1ECB2B06BF2D00E57028 /* FlagRaisingLeaderboardPresentationView.swift */; };
 		324E1ECE2B06EFAA00E57028 /* ReviewPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324E1ECD2B06EFAA00E57028 /* ReviewPresentationView.swift */; };
 		324E1ED02B06F25800E57028 /* ReviewPresentationGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324E1ECF2B06F25800E57028 /* ReviewPresentationGroupView.swift */; };
+		326B3F8F2B07C283008113FD /* TriviaPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326B3F8E2B07C283008113FD /* TriviaPresentationView.swift */; };
 		327129BC2B0255BA001CE562 /* DiscordAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 327129BB2B0255BA001CE562 /* DiscordAuth */; };
 		327129BE2B0255BA001CE562 /* DiscordBM in Frameworks */ = {isa = PBXBuildFile; productRef = 327129BD2B0255BA001CE562 /* DiscordBM */; };
 		327129C02B0255BA001CE562 /* DiscordCore in Frameworks */ = {isa = PBXBuildFile; productRef = 327129BF2B0255BA001CE562 /* DiscordCore */; };
@@ -58,6 +59,7 @@
 		324E1ECB2B06BF2D00E57028 /* FlagRaisingLeaderboardPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagRaisingLeaderboardPresentationView.swift; sourceTree = "<group>"; };
 		324E1ECD2B06EFAA00E57028 /* ReviewPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPresentationView.swift; sourceTree = "<group>"; };
 		324E1ECF2B06F25800E57028 /* ReviewPresentationGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPresentationGroupView.swift; sourceTree = "<group>"; };
+		326B3F8E2B07C283008113FD /* TriviaPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaPresentationView.swift; sourceTree = "<group>"; };
 		327129C92B0255D5001CE562 /* Discord.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Discord.plist; sourceTree = "<group>"; };
 		327129CB2B025614001CE562 /* DiscordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscordManager.swift; sourceTree = "<group>"; };
 		327129CD2B025826001CE562 /* DiscordInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscordInfo.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				324E1EBB2B067E7600E57028 /* StatementPresentationView.swift */,
 				324E1ECD2B06EFAA00E57028 /* ReviewPresentationView.swift */,
 				324E1ECF2B06F25800E57028 /* ReviewPresentationGroupView.swift */,
+				326B3F8E2B07C283008113FD /* TriviaPresentationView.swift */,
 				324E1EBF2B068C4200E57028 /* ImagePresentationView.swift */,
 				324E1EC42B06ADC600E57028 /* TimerPresentationView.swift */,
 				324E1EC62B06B69E00E57028 /* WordsPresentationView.swift */,
@@ -268,6 +271,7 @@
 				327129CC2B025614001CE562 /* DiscordManager.swift in Sources */,
 				327129D62B03DC82001CE562 /* AppIdeaActivityScene.swift in Sources */,
 				32F84EAE2B01E6D00068BFE6 /* DashboardView.swift in Sources */,
+				326B3F8F2B07C283008113FD /* TriviaPresentationView.swift in Sources */,
 				324E1EB82B067BC900E57028 /* SectionPresentationView.swift in Sources */,
 				324E1EC72B06B69E00E57028 /* WordsPresentationView.swift in Sources */,
 				324E1EB62B067AC300E57028 /* ActivityTitlePresentationView.swift in Sources */,

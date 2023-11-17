@@ -29,10 +29,10 @@ struct PresentationView: View {
                 StatementPresentationView(statement: statement)
             case .timer(let timer):
                 TimerPresentationView(namespace: namespace, timerInput: timer)
-            case .trivia(let string, let nSImage, let date):
-                Rectangle().fill(.blue)
-            case .submissions:
-                ReviewPresentationView(submissions: discordManager.submissions)
+            case .trivia(let duration, let title, let qnNumber, let image):
+                TriviaPresentationView(duration: duration, title: title, questionNumber: qnNumber, image: image)
+            case .submissions(let activity):
+                ReviewPresentationView(activity: activity, submissions: discordManager.submissions)
             case .leaderboards:
                 FlagRaisingLeaderboardPresentationView()
             case .image(let nsImage):

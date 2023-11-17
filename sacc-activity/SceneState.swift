@@ -42,13 +42,13 @@ enum SceneState {
     case timer(TimerInput)
     
     // title, image, completion date
-    case trivia(String, NSImage?, Date)
-    
+    case trivia(TimeInterval, String, Int, NSImage?)
+
     // display 50 random words
     case words
     
     // A Padlet board style screen
-    case submissions
+    case submissions(String)
     
     case leaderboards
     case image(NSImage)
@@ -75,6 +75,8 @@ struct ActivitySubscene: Identifiable {
 }
 
 struct Submission {
+    var activity: String
+    
     var activityGroup: ActivityGroup
     
     var contents: SubmissionType

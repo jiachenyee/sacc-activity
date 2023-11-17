@@ -83,8 +83,18 @@ class DiscordManager: ObservableObject {
                         await MainActor.run {
                             activityGroups[groupReferenceIndex].flagURL = imageURL
                             print(imageURL)
-                            self.submissions.append(Submission(activityGroup: activityGroups[groupReferenceIndex],
+                            self.submissions.append(Submission(activity: "flag",
+                                                               activityGroup: activityGroups[groupReferenceIndex],
                                                                contents: .flag))
+                        }
+                    }
+                case "idea":
+                    guard let value = applicationCommand.options?.first?.value?.asString else { return }
+                    Task {
+                        await MainActor.run {
+                            self.submissions.append(Submission(activity: "idea",
+                                                               activityGroup: activityGroups[groupReferenceIndex],
+                                                               contents: .text(value)))
                         }
                     }
                 default: break

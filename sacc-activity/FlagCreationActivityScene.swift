@@ -72,7 +72,7 @@ struct FlagCreationActivityScene: ActivityScene {
                          }, onEnd: { discordManager in
                              discordManager.activeSlashCommand = nil
                          }),
-        ActivitySubscene(systemImage: "eyes", title: "Review", state: .submissions([])),
+        ActivitySubscene(systemImage: "eyes", title: "Review", state: .submissions("flag")),
         ActivitySubscene(systemImage: "flag.filled.and.flag.crossed", title: "Leaderboard", state: .leaderboards)
     ]
 }
