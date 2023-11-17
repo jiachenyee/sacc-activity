@@ -19,6 +19,8 @@
 		324E1EC72B06B69E00E57028 /* WordsPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324E1EC62B06B69E00E57028 /* WordsPresentationView.swift */; };
 		324E1ECA2B06B84300E57028 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 324E1EC92B06B84300E57028 /* Algorithms */; };
 		324E1ECC2B06BF2D00E57028 /* FlagRaisingLeaderboardPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324E1ECB2B06BF2D00E57028 /* FlagRaisingLeaderboardPresentationView.swift */; };
+		324E1ECE2B06EFAA00E57028 /* ReviewPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324E1ECD2B06EFAA00E57028 /* ReviewPresentationView.swift */; };
+		324E1ED02B06F25800E57028 /* ReviewPresentationGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324E1ECF2B06F25800E57028 /* ReviewPresentationGroupView.swift */; };
 		327129BC2B0255BA001CE562 /* DiscordAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 327129BB2B0255BA001CE562 /* DiscordAuth */; };
 		327129BE2B0255BA001CE562 /* DiscordBM in Frameworks */ = {isa = PBXBuildFile; productRef = 327129BD2B0255BA001CE562 /* DiscordBM */; };
 		327129C02B0255BA001CE562 /* DiscordCore in Frameworks */ = {isa = PBXBuildFile; productRef = 327129BF2B0255BA001CE562 /* DiscordCore */; };
@@ -54,6 +56,8 @@
 		324E1EC42B06ADC600E57028 /* TimerPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPresentationView.swift; sourceTree = "<group>"; };
 		324E1EC62B06B69E00E57028 /* WordsPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsPresentationView.swift; sourceTree = "<group>"; };
 		324E1ECB2B06BF2D00E57028 /* FlagRaisingLeaderboardPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagRaisingLeaderboardPresentationView.swift; sourceTree = "<group>"; };
+		324E1ECD2B06EFAA00E57028 /* ReviewPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPresentationView.swift; sourceTree = "<group>"; };
+		324E1ECF2B06F25800E57028 /* ReviewPresentationGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPresentationGroupView.swift; sourceTree = "<group>"; };
 		327129C92B0255D5001CE562 /* Discord.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Discord.plist; sourceTree = "<group>"; };
 		327129CB2B025614001CE562 /* DiscordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscordManager.swift; sourceTree = "<group>"; };
 		327129CD2B025826001CE562 /* DiscordInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscordInfo.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 				324E1EB72B067BC900E57028 /* SectionPresentationView.swift */,
 				324E1EB92B067C9500E57028 /* PointersPresentationView.swift */,
 				324E1EBB2B067E7600E57028 /* StatementPresentationView.swift */,
+				324E1ECD2B06EFAA00E57028 /* ReviewPresentationView.swift */,
+				324E1ECF2B06F25800E57028 /* ReviewPresentationGroupView.swift */,
 				324E1EBF2B068C4200E57028 /* ImagePresentationView.swift */,
 				324E1EC42B06ADC600E57028 /* TimerPresentationView.swift */,
 				324E1EC62B06B69E00E57028 /* WordsPresentationView.swift */,
@@ -255,6 +261,7 @@
 				327129CE2B025826001CE562 /* DiscordInfo.swift in Sources */,
 				327129D22B03DADC001CE562 /* ActivityScene.swift in Sources */,
 				324E1EC32B06944200E57028 /* ActivitySceneDashboardItemButton.swift in Sources */,
+				324E1ED02B06F25800E57028 /* ReviewPresentationGroupView.swift in Sources */,
 				327129DA2B03E794001CE562 /* ActivitySceneDashboardView.swift in Sources */,
 				327129D02B025CBE001CE562 /* DiscordManager+SlashCommands.swift in Sources */,
 				324E1EBC2B067E7600E57028 /* StatementPresentationView.swift in Sources */,
@@ -267,6 +274,7 @@
 				324E1EB12B06793400E57028 /* PresentationView.swift in Sources */,
 				327129D42B03DC43001CE562 /* FlagCreationActivityScene.swift in Sources */,
 				327129D82B03DCD7001CE562 /* TriviaActivityScene.swift in Sources */,
+				324E1ECE2B06EFAA00E57028 /* ReviewPresentationView.swift in Sources */,
 				324E1ECC2B06BF2D00E57028 /* FlagRaisingLeaderboardPresentationView.swift in Sources */,
 				32F84EAC2B01E6D00068BFE6 /* sacc_activityApp.swift in Sources */,
 				324E1EC02B068C4200E57028 /* ImagePresentationView.swift in Sources */,

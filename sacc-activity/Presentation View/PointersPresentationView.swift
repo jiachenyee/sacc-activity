@@ -24,6 +24,7 @@ struct PointersPresentationView: View {
                     Text(content.title)
                         .font(.system(size: 55, weight: .semibold))
                         .multilineTextAlignment(.center)
+                        .padding(.bottom)
                     Text(try! AttributedString(markdown: content.subtitle))
                         .font(.system(size: 32, weight: .light))
                         .multilineTextAlignment(.center)

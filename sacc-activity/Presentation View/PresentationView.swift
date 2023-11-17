@@ -31,8 +31,8 @@ struct PresentationView: View {
                 TimerPresentationView(namespace: namespace, timerInput: timer)
             case .trivia(let string, let nSImage, let date):
                 Rectangle().fill(.blue)
-            case .submissions(let array):
-                Rectangle().fill(.blue)
+            case .submissions:
+                ReviewPresentationView(submissions: discordManager.submissions)
             case .leaderboards:
                 FlagRaisingLeaderboardPresentationView()
             case .image(let nsImage):

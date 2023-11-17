@@ -28,6 +28,8 @@ class DiscordManager: ObservableObject {
     
     @Published var activeSlashCommand: String?
     
+    @Published var submissions: [Submission] = []
+    
     @Published var activityScenes: [any ActivityScene] = [
         WelcomeActivityScene(),
         FlagCreationActivityScene(),
@@ -65,8 +67,29 @@ class DiscordManager: ObservableObject {
         await setUpSlashCommands()
         
         for await event in await bot!.events {
-            EventHandler(event: event, client: bot!.client, activeCommand: activeSlashCommand) { interaction in
-                #warning("implement handle after receiving bot info")
+            EventHandler(event: event, client: bot!.client, activeCommand: activeSlashCommand) { [self] (interaction, applicationCommand) in
+                
+                guard let channelName = interaction.channel?.name,
+                      let groupIndex = channelName.split(separator: " ").last else { return }
+                
+                let groupReferenceIndex = ((Int(groupIndex) ?? 1) - 1)
+                
+                switch applicationCommand.name {
+                case "flag":
+                    guard let attachment = applicationCommand.resolved?.attachments?.first,
+                          let imageURL = URL(string: attachment.value.url) else { return }
+                    
+                    Task {
+                        await MainActor.run {
+                            activityGroups[groupReferenceIndex].flagURL = imageURL
+                            print(imageURL)
+                            self.submissions.append(Submission(activityGroup: activityGroups[groupReferenceIndex],
+                                                               contents: .flag))
+                        }
+                    }
+                default: break
+                }
+                
             }.handle()
         }
     }
@@ -77,7 +100,7 @@ struct EventHandler: GatewayEventHandler, @unchecked Sendable {
     let client: any DiscordClient
     let activeCommand: String?
     
-    let onSuccess: ((Interaction) -> ())
+    let onSuccess: ((Interaction, Interaction.ApplicationCommand) -> ())
     
     func onInteractionCreate(_ interaction: Interaction) async throws {
         switch interaction.data {
@@ -110,7 +133,7 @@ struct EventHandler: GatewayEventHandler, @unchecked Sendable {
                 payload: .channelMessageWithSource(.init(content: "Thanks for your submission!\n\nUse this command again to replace the current submission."))
             ).guardSuccess()
             
-            onSuccess(interaction)
+            onSuccess(interaction, applicationCommand)
         default: break
         }
     }

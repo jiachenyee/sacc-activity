@@ -48,7 +48,7 @@ enum SceneState {
     case words
     
     // A Padlet board style screen
-    case submissions([Submission])
+    case submissions
     
     case leaderboards
     case image(NSImage)
@@ -75,7 +75,6 @@ struct ActivitySubscene: Identifiable {
 }
 
 struct Submission {
-    var groupNumber: Int
     var activityGroup: ActivityGroup
     
     var contents: SubmissionType
@@ -90,8 +89,7 @@ struct ActivityGroup: Identifiable {
     var id: String { groupName }
     
     var groupName: String
-    var flag: NSImage?
-    var originalDiscordURL: URL?
+    var flagURL: URL?
     
     var points = 0
 }
