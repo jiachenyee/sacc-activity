@@ -15,15 +15,26 @@ struct DashboardView: View {
     
     var body: some View {
         NavigationStack {
-            TabView(selection: $discordManager.currentActivitySceneIndex) {
-                ForEach(0..<discordManager.activityScenes.count, id: \.self) { activitySceneIndex in
-                    let activityScene = discordManager.activityScenes[activitySceneIndex]
-                    
-                    ActivitySceneDashboardView(activityScene: $discordManager.activityScenes[activitySceneIndex])
-                        .tabItem {
-                            Label(activityScene.title,
-                                  systemImage: activityScene.systemName)
+            HSplitView {
+                TabView(selection: $discordManager.currentActivitySceneIndex) {
+                    ForEach(0..<discordManager.activityScenes.count, id: \.self) { activitySceneIndex in
+                        let activityScene = discordManager.activityScenes[activitySceneIndex]
+                        
+                        ActivitySceneDashboardView(activityScene: $discordManager.activityScenes[activitySceneIndex])
+                            .tabItem {
+                                Label(activityScene.title,
+                                      systemImage: activityScene.systemName)
+                            }
+                    }
+                }
+                
+                VStack {
+                    Button("Show Leaderboards") {
+                        withAnimation {
+                            discordManager.currentScene = .init(systemImage: "", title: "", state: .leaderboards)
                         }
+                    }
+                    AddPointsView(groups: $discordManager.activityGroups)
                 }
             }
             .navigationTitle("Dashboard")

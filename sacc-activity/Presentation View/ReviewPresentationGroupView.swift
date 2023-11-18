@@ -19,12 +19,6 @@ struct ReviewPresentationGroupView: View {
             RoundedRectangle(cornerRadius: 21)
                 .stroke(lineWidth: 5)
                 .opacity(0.2)
-            Text("GROUP \(groupIndex)")
-                .font(.system(size: 30))
-                .padding(4)
-                .background(.black)
-                .frame(maxHeight: .infinity, alignment: .top)
-                .offset(y: -20)
             
             if let submission = submissions.last(where: {
                 $0.activity == activity && String($0.activityGroup.groupName.split(separator: " ").last ?? "") == String(groupIndex)
@@ -73,12 +67,43 @@ struct ReviewPresentationGroupView: View {
                         }
                         .padding(32)
                     }
+                case .triviaSubmission(let submission, let label):
+                    VStack {
+                        Text(submission)
+                            .multilineTextAlignment(.leading)
+                            .font(.system(size: 32))
+                            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                            .foregroundStyle(.white)
+                        
+                        Text(label)
+                            .frame(maxWidth: .infinity, alignment: .trailing)
+                            .font(.system(size: 18, weight: .light))
+                    }
+                    .padding(32)
+                case .triviaMap(let location, let label):
+                    ZStack(alignment: .bottomTrailing) {
+                        MapWithPinView(coordinate: location)
+                            .clipShape(RoundedRectangle(cornerRadius: 21))
+                        Text(label)
+                            .frame(maxWidth: .infinity, alignment: .trailing)
+                            .font(.system(size: 18, weight: .light))
+                            .padding(32)
+                            .background(.thickMaterial)
+                    }
                 }
             } else {
                 Text("No Submission")
                     .font(.system(size: 32))
                     .foregroundStyle(.white.opacity(0.7))
             }
+            
+            Text("GROUP \(groupIndex)")
+                .font(.system(size: 30))
+                .padding(4)
+                .background(.black)
+                .frame(maxHeight: .infinity, alignment: .top)
+                .offset(y: -20)
+                .zIndex(100)
         }
         .frame(width: 534, height: 254)
     }

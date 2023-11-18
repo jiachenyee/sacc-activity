@@ -84,6 +84,8 @@ struct Submission {
     enum SubmissionType {
         case flag
         case text(String)
+        case triviaSubmission(String, String)
+        case triviaMap((Double, Double), String)
     }
 }
 
