@@ -17,18 +17,8 @@ struct MapWithPinView: View {
             interactionModes: []
         ) {
             Marker(coordinate: CLLocationCoordinate2D(latitude: coordinate.0, longitude: coordinate.1)) {
-                Text("Pin")
+                Text("\(coordinate.0), \(coordinate.1)")
             }
-        }
-        .overlay(alignment: .top) {
-            Text("\(coordinate.0), \(coordinate.1)")
-                .padding(10)
-                .background {
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(.thinMaterial)
-                }
-                .padding(.top, 32-10)
-                .font(.system(size: 32))
         }
     }
 

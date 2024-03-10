@@ -30,7 +30,7 @@ struct TimerPresentationView: View {
         ZStack {
             switch timerInput.content {
             case .wordsList:
-                Text("Use `/idea` to submit your team’s app idea")
+                Text("Use `/story` to submit your team’s story.")
                     .font(.system(size: 80, weight: .medium))
                     .multilineTextAlignment(.center)
                     .frame(maxHeight: .infinity, alignment: .top)

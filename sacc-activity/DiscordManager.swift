@@ -11,9 +11,20 @@ import AsyncHTTPClient
 
 class DiscordManager: ObservableObject {
     
-    @Published var activityGroups = (1...9).map {
-        ActivityGroup(groupName: "Group \($0)")
-    }
+    @Published var activityGroups = [
+        ActivityGroup(groupName: "twisties"),
+        ActivityGroup(groupName: "pizza"),
+        ActivityGroup(groupName: "mad-developers"),
+        ActivityGroup(groupName: "mewing-dabys"),
+        ActivityGroup(groupName: "fried-chicken"),
+        ActivityGroup(groupName: "ipear"),
+        ActivityGroup(groupName: "i-dont-know"),
+        ActivityGroup(groupName: "noted-with-thanks"),
+        ActivityGroup(groupName: "john"),
+        ActivityGroup(groupName: "bob-the-builder"),
+        ActivityGroup(groupName: "anything-ah-anything"),
+        ActivityGroup(groupName: "half-functional")
+    ]
     
     @Published var presentedSceneIDs: Set<UUID> = []
     
@@ -57,7 +68,7 @@ class DiscordManager: ObservableObject {
             httpClient: httpClient,
             token: discordInfo.token,
             presence: .init(
-                activities: [.init(name: "YJ teach Swift Accelerator classes", type: .listening)],
+                activities: [.init(name: "Taylor Swift", type: .listening)],
                 status: .online,
                 afk: false),
             intents: Gateway.Intent.allCases
@@ -71,9 +82,9 @@ class DiscordManager: ObservableObject {
             EventHandler(event: event, client: bot!.client, activeCommand: activeSlashCommand) { [self] (interaction, applicationCommand) in
                 
                 guard let channelName = interaction.channel?.name,
-                      let groupIndex = channelName.split(separator: "-").last else { return }
-                
-                let groupReferenceIndex = ((Int(groupIndex) ?? 1) - 1)
+                      let groupReferenceIndex = activityGroups.firstIndex(where: {
+                          $0.groupName == channelName
+                      }) else { return }
                 
                 switch applicationCommand.name {
                 case "flag":
@@ -89,7 +100,7 @@ class DiscordManager: ObservableObject {
                                                                contents: .flag))
                         }
                     }
-                case "idea":
+                case "story":
                     guard let value = applicationCommand.options?.first?.value?.asString else { return }
                     Task {
                         await MainActor.run {
@@ -98,7 +109,7 @@ class DiscordManager: ObservableObject {
                                                                contents: .text(value)))
                         }
                     }
-                case "q1", "q4":
+                case "q1", "q8", "q11", "q12", "q14":
                     guard let value = applicationCommand.options?.first?.value?.asString else { return }
                     Task {
                         await MainActor.run {
@@ -107,15 +118,20 @@ class DiscordManager: ObservableObject {
                                                                contents: .text(value)))
                         }
                     }
-                case "q2", "q3", "q5", "q6":
+                case "q2", "q3", "q4", "q5", "q6", "q7", "q10", "q13", "q15":
                     guard let value = try? applicationCommand.options?.first?.value?.requireInt() else { return }
                     
                     Task {
-                        var targetValues = [
-                            "q2": 7,
-                            "q3": 1_783_232,
-                            "q5": 1983,
-                            "q6": 2019,
+                        let targetValues = [
+                            "q2": 3,
+                            "q3": 1983,
+                            "q4": 2019,
+                            "q5": 26,
+                            "q6": 11,
+                            "q7": 2019,
+                            "q10": 17,
+                            "q13": 13,
+                            "q15": 1989
                         ]
                         
                         let targetValue: Int = targetValues[applicationCommand.name]!
@@ -131,25 +147,24 @@ class DiscordManager: ObservableObject {
                             await MainActor.run {
                                 self.submissions.append(Submission(activity: applicationCommand.name,
                                                                    activityGroup: activityGroups[groupReferenceIndex],
-                                                                   contents: .triviaSubmission("\(value)", "\(abs(offset)) too many")))
+                                                                   contents: .triviaSubmission("\(value)", "\(abs(offset)) over")))
                             }
                         } else {
                             await MainActor.run {
                                 self.submissions.append(Submission(activity: applicationCommand.name,
                                                                    activityGroup: activityGroups[groupReferenceIndex],
-                                                                   contents: .triviaSubmission("\(value)", "\(abs(offset)) too few")))
+                                                                   contents: .triviaSubmission("\(value)", "\(abs(offset)) under")))
                             }
                         }
                     }
-                case "q8", "q9":
+                case "q9":
                     guard let options = applicationCommand.options,
                           options.count == 2,
                             let latitude = try? options[0].requireDouble(),
                             let longitude = try? options[1].requireDouble() else { return }
                     
                     let coords = [
-                        "q8": (1.289072, 103.856147),
-                        "q9": (25.195645, 55.277522)
+                        "q9": (1.289072, 103.856147)
                     ]
                     
                     let distance = haversineDistance(coord1: (latitude: latitude, longitude: longitude), coord2: coords[applicationCommand.name]!)
@@ -212,8 +227,23 @@ struct EventHandler: GatewayEventHandler, @unchecked Sendable {
     func onInteractionCreate(_ interaction: Interaction) async throws {
         switch interaction.data {
         case let .applicationCommand(applicationCommand):
+            let groups = [
+                "twisties",
+                "pizza",
+                "mad-developers",
+                "mewing-dabys",
+                "fried-chicken",
+                "ipear",
+                "i-dont-know",
+                "noted-with-thanks",
+                "john",
+                "bob-the-builder",
+                "anything-ah-anything",
+                "half-functional"
+            ]
+            
             guard let channelName = interaction.channel?.name,
-                  channelName.starts(with: "group-") || channelName == "bot-logging" else {
+                  groups.contains(channelName) || channelName == "bot-logging" else {
                 try await client.createInteractionResponse(
                     id: interaction.id,
                     token: interaction.token,

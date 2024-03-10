@@ -26,9 +26,9 @@ struct WelcomeActivityScene: ActivityScene {
         ActivitySubscene(systemImage: "ruler",
                          title: "Rules",
                          state: .pointers([
-                            Pointer(systemName: "heart.fill", title: "Be Respectful", color: .red),
-                            Pointer(systemName: "bubble.left.and.text.bubble.right.fill", title: "Discuss on Discord", color: .blue),
-                            Pointer(systemName: "balloon.2.fill", title: "Have Fun!", color: .yellow)
+                            Pointer(systemName: "bubble.left.and.text.bubble.right.fill", title: "Let everyone have a say!", color: .blue),
+                            Pointer(systemName: "balloon.2.fill", title: "Have Fun!", color: .red),
+                            Pointer(systemName: "trophy.fill", title: "Prizes may be available!", color: .yellow)
                          ]))
     ]
 }

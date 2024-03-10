@@ -52,10 +52,10 @@ struct FlagRaisingLeaderboardPresentationView: View {
     
     func sizeFor(rank: Int) -> Double {
         switch rank {
-        case 0: 90 // first place
-        case 1: 75 // second place
-        case 2: 60 // third place
-        default: 50 // everything else
+        case 0: 70 // first place
+        case 1: 55 // second place
+        case 2: 40 // third place
+        default: 30 // everything else
         }
     }
     
