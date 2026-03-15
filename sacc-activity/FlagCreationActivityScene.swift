@@ -66,7 +66,7 @@ struct FlagCreationActivityScene: ActivityScene {
                                     title: "Upload",
                                     color: .cyan,
                                     subtitle: "Use `/flag` in your group text channel")
-                         ]), endDate: .init(timeIntervalSince1970: 1710122400))),
+                         ]), endDate: .init(timeIntervalSince1970: 1773626400))),
                          onStart: { discordManager in
                              discordManager.activeSlashCommand = "flag"
                          }, onEnd: { discordManager in

@@ -81,7 +81,7 @@ struct AppIdeaActivityScene: ActivityScene {
                                     title: "Share",
                                     color: .yellow,
                                     subtitle: "Use `/story` in your group text channel")
-                         ]), endDate: .init(timeIntervalSince1970: 1710122400))),
+                         ]), endDate: .init(timeIntervalSince1970: 1773626400))),
                          onStart: { discordManager in
                              discordManager.activeSlashCommand = "story"
                          }, onEnd: { discordManager in

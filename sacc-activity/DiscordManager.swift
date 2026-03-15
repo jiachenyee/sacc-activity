@@ -77,11 +77,11 @@ class DiscordManager: ObservableObject {
                 afk: false),
             intents: Gateway.Intent.allCases
         )
-        
+
         await bot?.connect()
-        
+
         await setUpSlashCommands()
-        
+
         for await event in await bot!.events {
             EventHandler(event: event, client: bot!.client, activeCommand: activeSlashCommand) { [self] (interaction, applicationCommand) in
                 
@@ -113,7 +113,7 @@ class DiscordManager: ObservableObject {
                                                                contents: .text(value)))
                         }
                     }
-                case "q1", "q8", "q11", "q12", "q14":
+                case "q1", "q8", "q11", "q14", "q15":
                     guard let value = applicationCommand.options?.first?.value?.asString else { return }
                     Task {
                         await MainActor.run {
@@ -122,7 +122,7 @@ class DiscordManager: ObservableObject {
                                                                contents: .text(value)))
                         }
                     }
-                case "q2", "q3", "q4", "q5", "q6", "q7", "q10", "q13", "q15":
+                case "q2", "q3", "q4", "q5", "q6", "q7", "q10", "q12", "q13":
                     guard let value = try? applicationCommand.options?.first?.value?.requireInt() else { return }
                     
                     Task {
@@ -130,12 +130,12 @@ class DiscordManager: ObservableObject {
                             "q2": 3,
                             "q3": 1983,
                             "q4": 2019,
-                            "q5": 26,
-                            "q6": 11,
+                            "q5": 2018,
+                            "q6": 18,
                             "q7": 2019,
                             "q10": 17,
-                            "q13": 13,
-                            "q15": 1989
+                            "q12": 1197,
+                            "q13": 13
                         ]
                         
                         let targetValue: Int = targetValues[applicationCommand.name]!
@@ -232,18 +232,22 @@ struct EventHandler: GatewayEventHandler, @unchecked Sendable {
         switch interaction.data {
         case let .applicationCommand(applicationCommand):
             let groups = [
-                "twisties",
-                "pizza",
-                "mad-developers",
-                "mewing-dabys",
-                "fried-chicken",
-                "ipear",
-                "i-dont-know",
-                "noted-with-thanks",
-                "john",
-                "bob-the-builder",
-                "anything-ah-anything",
-                "half-functional"
+                "1AM",
+                "2AM",
+                "3AM",
+                "4AM",
+                "5AM",
+                "6AM",
+                "7AM",
+                "8AM",
+                "1PM",
+                "2PM",
+                "3PM",
+                "4PM",
+                "5PM",
+                "6PM",
+                "7PM",
+                "8PM"
             ]
             
             guard let channelName = interaction.channel?.name,
