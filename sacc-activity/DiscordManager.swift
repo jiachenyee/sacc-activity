@@ -12,22 +12,22 @@ import AsyncHTTPClient
 class DiscordManager: ObservableObject {
     
     @Published var activityGroups = [
-        ActivityGroup(groupName: "1AM"),
-        ActivityGroup(groupName: "2AM"),
-        ActivityGroup(groupName: "3AM"),
-        ActivityGroup(groupName: "4AM"),
-        ActivityGroup(groupName: "5AM"),
-        ActivityGroup(groupName: "6AM"),
-        ActivityGroup(groupName: "7AM"),
-        ActivityGroup(groupName: "8AM"),
-        ActivityGroup(groupName: "1PM"),
-        ActivityGroup(groupName: "2PM"),
-        ActivityGroup(groupName: "3PM"),
-        ActivityGroup(groupName: "4PM"),
-        ActivityGroup(groupName: "5PM"),
-        ActivityGroup(groupName: "6PM"),
-        ActivityGroup(groupName: "7PM"),
-        ActivityGroup(groupName: "8PM"),
+        ActivityGroup(groupName: "1am"),
+        ActivityGroup(groupName: "2am"),
+        ActivityGroup(groupName: "3am"),
+        ActivityGroup(groupName: "4am"),
+        ActivityGroup(groupName: "5am"),
+        ActivityGroup(groupName: "6am"),
+        ActivityGroup(groupName: "7am"),
+        ActivityGroup(groupName: "8am"),
+        ActivityGroup(groupName: "1pm"),
+        ActivityGroup(groupName: "2pm"),
+        ActivityGroup(groupName: "3pm"),
+        ActivityGroup(groupName: "4pm"),
+        ActivityGroup(groupName: "5pm"),
+        ActivityGroup(groupName: "6pm"),
+        ActivityGroup(groupName: "7pm"),
+        ActivityGroup(groupName: "8pm"),
     ]
 
     @Published var presentedSceneIDs: Set<UUID> = []
@@ -232,22 +232,22 @@ struct EventHandler: GatewayEventHandler, @unchecked Sendable {
         switch interaction.data {
         case let .applicationCommand(applicationCommand):
             let groups = [
-                "1AM",
-                "2AM",
-                "3AM",
-                "4AM",
-                "5AM",
-                "6AM",
-                "7AM",
-                "8AM",
-                "1PM",
-                "2PM",
-                "3PM",
-                "4PM",
-                "5PM",
-                "6PM",
-                "7PM",
-                "8PM"
+                "1am",
+                "2am",
+                "3am",
+                "4am",
+                "5am",
+                "6am",
+                "7am",
+                "8am",
+                "1pm",
+                "2pm",
+                "3pm",
+                "4pm",
+                "5pm",
+                "6pm",
+                "7pm",
+                "8pm"
             ]
             
             guard let channelName = interaction.channel?.name,
