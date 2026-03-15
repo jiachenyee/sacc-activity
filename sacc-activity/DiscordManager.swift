@@ -12,20 +12,24 @@ import AsyncHTTPClient
 class DiscordManager: ObservableObject {
     
     @Published var activityGroups = [
-        ActivityGroup(groupName: "twisties"),
-        ActivityGroup(groupName: "pizza"),
-        ActivityGroup(groupName: "mad-developers"),
-        ActivityGroup(groupName: "mewing-dabys"),
-        ActivityGroup(groupName: "fried-chicken"),
-        ActivityGroup(groupName: "ipear"),
-        ActivityGroup(groupName: "i-dont-know"),
-        ActivityGroup(groupName: "noted-with-thanks"),
-        ActivityGroup(groupName: "john"),
-        ActivityGroup(groupName: "bob-the-builder"),
-        ActivityGroup(groupName: "anything-ah-anything"),
-        ActivityGroup(groupName: "half-functional")
+        ActivityGroup(groupName: "1AM"),
+        ActivityGroup(groupName: "2AM"),
+        ActivityGroup(groupName: "3AM"),
+        ActivityGroup(groupName: "4AM"),
+        ActivityGroup(groupName: "5AM"),
+        ActivityGroup(groupName: "6AM"),
+        ActivityGroup(groupName: "7AM"),
+        ActivityGroup(groupName: "8AM"),
+        ActivityGroup(groupName: "1PM"),
+        ActivityGroup(groupName: "2PM"),
+        ActivityGroup(groupName: "3PM"),
+        ActivityGroup(groupName: "4PM"),
+        ActivityGroup(groupName: "5PM"),
+        ActivityGroup(groupName: "6PM"),
+        ActivityGroup(groupName: "7PM"),
+        ActivityGroup(groupName: "8PM"),
     ]
-    
+
     @Published var presentedSceneIDs: Set<UUID> = []
     
     @Published var currentScene: ActivitySubscene = .init(systemImage: "", title: "", state: .empty) {

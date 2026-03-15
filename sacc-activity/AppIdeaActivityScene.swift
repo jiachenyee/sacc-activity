@@ -66,7 +66,7 @@ struct AppIdeaActivityScene: ActivityScene {
                          ])),
         ActivitySubscene(systemImage: "text.alignleft",
                          title: "Example Story",
-                         state: .statement("Never in Sean’s *wildest dreams* did he ever imagine he would be the main trainer of Swift Accelerator, it was a *cruel summer* when YJ and Jia Chen were crossing *Cornelia Street* and was hit by a bus. They met their *end game.* Since that day, *everything has changed,* Sean became the main trainer, and he has been *haunted* by it ever since. When it happened, he was not _...ready for it_, but he has learned to embrace the _change_. He will _forever & always_ be the main trainer of the programme until he gets hit by another bus. That is _the story of us_.")),
+                         state: .statement("Never in Bryan's *wildest dreams* did he ever imagine he would be the main trainer of Swift Accelerator, it was a *cruel summer* when YJ and Jia Chen were crossing *Cornelia Street* and was hit by a bus. They met their *end game.* Since that day, *everything has changed,* Bryan became the main trainer, and he has been *haunted* by it ever since. When it happened, he was not _...ready for it_, but he has learned to embrace the _change_. He will _forever & always_ be the main trainer of the programme until he gets hit by another bus. That is _the story of us_.")),
         ActivitySubscene(systemImage: "timer", title: "Activity Timer",
                          state: .timer(TimerInput(content: .pointers([
                             Pointer(systemName: "bubble.left.and.text.bubble.right.fill",
