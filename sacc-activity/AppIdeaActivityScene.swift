@@ -66,7 +66,7 @@ struct AppIdeaActivityScene: ActivityScene {
                          ])),
         ActivitySubscene(systemImage: "text.alignleft",
                          title: "Example Story",
-                         state: .statement("Never in Tristan’s *wildest dreams* did he ever imagine he would be the main trainer of Swift Accelerator, it was a *cruel summer* when YJ, Jia Chen and Sean were crossing *Cornelia Street* and were hit by a bus. They met their *end game*. Since that day, *everything has changed*, Tristan became the main trainer, and he has been haunted by it ever since. When it happened, he was not *...ready for it* and he pissed mentors off (which has retrospectively been called his PMO era for abbreviation), but he has learned to embrace the *change*. He will *forever & always* be the main trainer of the programme until he gets hit by another bus. That is *the story of us*, and Tristan will always remember to look both ways before crossing the street, for he knows *All Too Well (10 Minute Version) (Taylor's Version) (From The Vault)* the consequences of not doing so.")),
+                         state: .statement("Never in Bryan's *wildest dreams* did he ever imagine he would be the main trainer of Swift Accelerator, it was a *cruel summer* when YJ and Jia Chen were crossing *Cornelia Street* and was hit by a bus. They met their *end game.* Since that day, *everything has changed,* Bryan became the main trainer, and he has been *haunted* by it ever since. When it happened, he was not _...ready for it_, but he has learned to embrace the _change_. He will _forever & always_ be the main trainer of the programme until he gets hit by another bus. That is _the story of us_.")),
         ActivitySubscene(systemImage: "timer", title: "Activity Timer",
                          state: .timer(TimerInput(content: .pointers([
                             Pointer(systemName: "bubble.left.and.text.bubble.right.fill",
@@ -81,7 +81,7 @@ struct AppIdeaActivityScene: ActivityScene {
                                     title: "Share",
                                     color: .yellow,
                                     subtitle: "Use `/story` in your group text channel")
-                         ]), endDate: .init(timeIntervalSince1970: 1710122400))),
+                         ]), endDate: .init(timeIntervalSince1970: 1773626400))),
                          onStart: { discordManager in
                              discordManager.activeSlashCommand = "story"
                          }, onEnd: { discordManager in

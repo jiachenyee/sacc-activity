@@ -29,7 +29,7 @@ class DiscordManager: ObservableObject {
         ActivityGroup(groupName: "7pm"),
         ActivityGroup(groupName: "8pm")
     ]
-    
+
     @Published var presentedSceneIDs: Set<UUID> = []
     
     @Published var currentScene: ActivitySubscene = .init(systemImage: "", title: "", state: .empty) {
@@ -132,12 +132,12 @@ class DiscordManager: ObservableObject {
                             "q2": 3,
                             "q3": 1983,
                             "q4": 2019,
-                            "q5": 26,
-                            "q6": 11,
+                            "q5": 2018,
+                            "q6": 18,
                             "q7": 2019,
                             "q10": 17,
-                            "q13": 13,
-                            "q15": 1989
+                            "q12": 1197,
+                            "q13": 13
                         ]
                         
                         let targetValue: Int = targetValues[applicationCommand.name]!

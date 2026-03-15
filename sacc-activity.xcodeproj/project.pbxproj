@@ -42,7 +42,6 @@
 		327129C42B0255BA001CE562 /* DiscordHTTP in Frameworks */ = {isa = PBXBuildFile; productRef = 327129C32B0255BA001CE562 /* DiscordHTTP */; };
 		327129C62B0255BA001CE562 /* DiscordModels in Frameworks */ = {isa = PBXBuildFile; productRef = 327129C52B0255BA001CE562 /* DiscordModels */; };
 		327129C82B0255BA001CE562 /* DiscordUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 327129C72B0255BA001CE562 /* DiscordUtilities */; };
-		327129CA2B0255D5001CE562 /* Discord.plist in Resources */ = {isa = PBXBuildFile; fileRef = 327129C92B0255D5001CE562 /* Discord.plist */; };
 		327129CC2B025614001CE562 /* DiscordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327129CB2B025614001CE562 /* DiscordManager.swift */; };
 		327129CE2B025826001CE562 /* DiscordInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327129CD2B025826001CE562 /* DiscordInfo.swift */; };
 		327129D02B025CBE001CE562 /* DiscordManager+SlashCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327129CF2B025CBE001CE562 /* DiscordManager+SlashCommands.swift */; };
@@ -59,6 +58,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D2547F22F6715D000B6A08F /* Discord.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Discord.plist; sourceTree = "<group>"; };
 		324E1EB02B06793400E57028 /* PresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationView.swift; sourceTree = "<group>"; };
 		324E1EB52B067AC300E57028 /* ActivityTitlePresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTitlePresentationView.swift; sourceTree = "<group>"; };
 		324E1EB72B067BC900E57028 /* SectionPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionPresentationView.swift; sourceTree = "<group>"; };
@@ -76,7 +76,6 @@
 		326B3F902B085686008113FD /* ClosingActivityScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosingActivityScene.swift; sourceTree = "<group>"; };
 		326B3F922B08727B008113FD /* AddPointsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPointsView.swift; sourceTree = "<group>"; };
 		326B3F942B087411008113FD /* MapWithPinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapWithPinView.swift; sourceTree = "<group>"; };
-		327129C92B0255D5001CE562 /* Discord.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Discord.plist; sourceTree = "<group>"; };
 		327129CB2B025614001CE562 /* DiscordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscordManager.swift; sourceTree = "<group>"; };
 		327129CD2B025826001CE562 /* DiscordInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscordInfo.swift; sourceTree = "<group>"; };
 		327129CF2B025CBE001CE562 /* DiscordManager+SlashCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscordManager+SlashCommands.swift"; sourceTree = "<group>"; };
@@ -186,7 +185,7 @@
 				327129D52B03DC82001CE562 /* AppIdeaActivityScene.swift */,
 				327129D72B03DCD7001CE562 /* TriviaActivityScene.swift */,
 				326B3F902B085686008113FD /* ClosingActivityScene.swift */,
-				327129C92B0255D5001CE562 /* Discord.plist */,
+				1D2547F22F6715D000B6A08F /* Discord.plist */,
 				32F84EAF2B01E6D10068BFE6 /* Assets.xcassets */,
 				32F84EB42B01E6D10068BFE6 /* sacc_activity.entitlements */,
 				32F84EB12B01E6D10068BFE6 /* Preview Content */,
@@ -285,9 +284,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				327129CA2B0255D5001CE562 /* Discord.plist in Resources */,
 				32F84EB32B01E6D10068BFE6 /* Preview Assets.xcassets in Resources */,
 				32F84EB02B01E6D10068BFE6 /* Assets.xcassets in Resources */,
+				1D2547F32F6715D100B6A08F /* Discord.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,7 +469,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "app.swiftin.sacc-activity";
+				PRODUCT_BUNDLE_IDENTIFIER = "sg.swiftin.sacc-activity";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -497,7 +496,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "app.swiftin.sacc-activity";
+				PRODUCT_BUNDLE_IDENTIFIER = "sg.swiftin.sacc-activity";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

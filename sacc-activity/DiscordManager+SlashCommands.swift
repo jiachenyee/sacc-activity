@@ -14,9 +14,11 @@ extension DiscordManager {
         
         do {
             try await bot?.client.bulkSetGuildApplicationCommands(guildId: .init(stringLiteral: discordInfo.guildId), payload: commands).guardSuccess()
+            print("Here")
         } catch {
             print(error)
             print(error.localizedDescription)
+            print("Here2")
         }
     }
     
