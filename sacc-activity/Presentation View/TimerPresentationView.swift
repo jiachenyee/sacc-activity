@@ -30,18 +30,16 @@ struct TimerPresentationView: View {
         ZStack {
             switch timerInput.content {
             case .wordsList:
-                Text("Use `/story` to submit your team’s story.")
-                    .font(.system(size: 80, weight: .medium))
-                    .multilineTextAlignment(.center)
-                    .frame(maxHeight: .infinity, alignment: .top)
-                    .padding(.top, 95)
-                
-                WordsPresentationView()
-                    .scaleEffect(0.7, anchor: .top)
-                    .padding(.top, 300)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-                    .clipped()
-                    .frame(width: 1920, height: 1080)
+                VStack(spacing: 0) {
+                    Text("Send your group name into your channel.")
+                        .font(.system(size: 52, weight: .medium))
+                        .multilineTextAlignment(.center)
+                    
+                    Image(.names)
+                        .resizable()
+                        .scaledToFit()
+                }
+                .padding(.vertical, 95)
             case .pointers(let array):
                 PointersPresentationView(namespace: namespace, contents: array)
                     .frame(maxHeight: .infinity)
@@ -56,6 +54,7 @@ struct TimerPresentationView: View {
                         .foregroundStyle(.yellow)
                         .font(.system(size: 48))
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(.black)
                 } else {
                     HStack(spacing: 0) {
                         Text("\(minutes):\(seconds)")

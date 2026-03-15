@@ -17,7 +17,3 @@ struct ImagePresentationView: View {
             .scaledToFit()
     }
 }
-
-#Preview {
-    ImagePresentationView(image: .groups)
-}

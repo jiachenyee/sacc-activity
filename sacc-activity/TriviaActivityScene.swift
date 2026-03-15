@@ -48,11 +48,13 @@ struct TriviaActivityScene: ActivityScene {
                                     min_value: .int(1000),
                                     max_value: .int(9999))]),
             Command(name: "q5",
-                    description: "Submit your answer for Trivia Question 5",
+                    description: "Submit your answer for Trivia Question 4",
                     options: [.init(type: .integer,
                                     name: "answer",
                                     description: "Enter your answer",
-                                    required: true)]),
+                                    required: true,
+                                    min_value: .int(1000),
+                                    max_value: .int(9999))]),
             Command(name: "q6",
                     description: "Submit your answer for Trivia Question 6",
                     options: [.init(type: .integer,
@@ -64,9 +66,7 @@ struct TriviaActivityScene: ActivityScene {
                     options: [.init(type: .integer,
                                     name: "answer",
                                     description: "Enter your answer",
-                                    required: true,
-                                    min_value: .int(1000),
-                                    max_value: .int(9999))]),
+                                    required: true)]),
             Command(name: "q8",
                     description: "Submit your answer for Trivia Question 8",
                     options: [.init(type: .string,
@@ -97,7 +97,7 @@ struct TriviaActivityScene: ActivityScene {
                                     required: true)]),
             Command(name: "q12",
                     description: "Submit your answer for Trivia Question 12",
-                    options: [.init(type: .string,
+                    options: [.init(type: .integer,
                                     name: "answer",
                                     description: "Enter your answer",
                                     required: true)]),
@@ -115,12 +115,10 @@ struct TriviaActivityScene: ActivityScene {
                                     required: true)]),
             Command(name: "q15",
                     description: "Submit your answer for Trivia Question 15",
-                    options: [.init(type: .integer,
+                    options: [.init(type: .string,
                                     name: "answer",
                                     description: "Enter your answer",
-                                    required: true,
-                                    min_value: .int(1000),
-                                    max_value: .int(9999))]),
+                                    required: true)]),
         ]
     }
     
@@ -132,10 +130,10 @@ struct TriviaActivityScene: ActivityScene {
             ActivitySubscene(systemImage: "list.clipboard",
                              title: "Briefing",
                              state: .pointers([
-                                Pointer(systemName: "person.fill.questionmark", title: "Answer Questions", color: .yellow, subtitle: "There are 9 trivia questions, you can discuss in your voice channels."),
-                                Pointer(systemName: "timer", title: "Clock’s Ticking!", color: .orange, subtitle: "Questions will either have 30 seconds, 1 minute, or 2 minutes for you to answer!"),
+                                Pointer(systemName: "person.fill.questionmark", title: "Answer Questions", color: .yellow, subtitle: "There are 15 trivia questions, you can discuss in your voice channels."),
+                                Pointer(systemName: "timer", title: "Clock’s Ticking!", color: .orange, subtitle: "Questions will either have 45 seconds, 1 minute, or 2 minutes for you to answer!"),
                                 Pointer(systemName: "scope", title: "Accuracy First", color: .red, subtitle: "It’s not about speed, it’s accuracy. Points are awarded based on the closest to the actual answer."),
-                                Pointer(systemName: "command", title: "Slash Commands!", color: .purple, subtitle: "We’ll use slash commands like `/q1` to `/q9` for this.")
+                                Pointer(systemName: "command", title: "Slash Commands!", color: .purple, subtitle: "We’ll use slash commands like `/q1` to `/q15` for this.")
                              ])),
             ActivitySubscene(systemImage: "flag.filled.and.flag.crossed", title: "Leaderboard", state: .leaderboards),
         ],
@@ -170,7 +168,7 @@ struct TriviaActivityScene: ActivityScene {
                                  discordManager.activeSlashCommand = nil
                              }),
             ActivitySubscene(systemImage: "3.square", title: "Q3 Answer", state: .statement("1983")),
-            ActivitySubscene(systemImage: "3.circle.fill", title: "Q5 Review", state: .submissions("q3")),
+            ActivitySubscene(systemImage: "3.circle.fill", title: "Q3 Review", state: .submissions("q3")),
         ],
         [
             ActivitySubscene(systemImage: "4.circle", title: "Q4: SwiftUI Release",
@@ -184,30 +182,30 @@ struct TriviaActivityScene: ActivityScene {
             ActivitySubscene(systemImage: "4.circle.fill", title: "Q4 Review", state: .submissions("q4")),
         ],
         [
-            ActivitySubscene(systemImage: "5.circle", title: "Q5: SAP Featured",
-                             state: .trivia(45, "How many times was Swift Accelerator featured?", 5, nil),
+            ActivitySubscene(systemImage: "5.circle", title: "Q5: SAP Start",
+                             state: .trivia(45, "What year did Swift Accelerator start?", 5, nil),
                              onStart: { discordManager in
                                  discordManager.activeSlashCommand = "q5"
                              }, onEnd: { discordManager in
                                  discordManager.activeSlashCommand = nil
                              }),
-            ActivitySubscene(systemImage: "5.square", title: "Q5 Answer", state: .statement("26")),
+            ActivitySubscene(systemImage: "5.square", title: "Q5 Answer", state: .statement("2018")),
             ActivitySubscene(systemImage: "5.circle.fill", title: "Q5 Review", state: .submissions("q5")),
         ],
         [
             ActivitySubscene(systemImage: "6.circle", title: "Q6: SSC Winners",
-                             state: .trivia(45, "How many Swift Student Challenge winners have come out of this programme?", 6, nil),
+                             state: .trivia(45, "How many Swift Student Challenge wins have come out of this programme?", 6, nil),
                              onStart: { discordManager in
                                  discordManager.activeSlashCommand = "q6"
                              }, onEnd: { discordManager in
                                  discordManager.activeSlashCommand = nil
                              }),
-            ActivitySubscene(systemImage: "6.square", title: "Q6 Answer", state: .statement("11")),
+            ActivitySubscene(systemImage: "6.square", title: "Q6 Answer", state: .statement("15")),
             ActivitySubscene(systemImage: "6.circle.fill", title: "Q6 Review", state: .submissions("q6")),
         ],
         [
             ActivitySubscene(systemImage: "7.circle", title: "Q7: Tim Cook",
-                             state: .trivia(45, "Which year did Tim Cook come to Swift Accelerator?", 7, nil),
+                             state: .trivia(45, "Which year did Tim Cook come to Swift Accelerator? Type 0 if he never came.", 7, nil),
                              onStart: { discordManager in
                                  discordManager.activeSlashCommand = "q7"
                              }, onEnd: { discordManager in
@@ -217,14 +215,14 @@ struct TriviaActivityScene: ActivityScene {
             ActivitySubscene(systemImage: "7.circle.fill", title: "Q7 Review", state: .submissions("q7")),
         ],
         [
-            ActivitySubscene(systemImage: "8.circle", title: "Q8: Apple Developer Center",
-                             state: .trivia(45, "Apple just launched a brand new space in Singapore, what is it?", 8, nil),
+            ActivitySubscene(systemImage: "8.circle", title: "Q8: MBA Color",
+                             state: .trivia(45, "What colour did Apple debut on the latest MacBook Air release?", 8, nil),
                              onStart: { discordManager in
                                  discordManager.activeSlashCommand = "q8"
                              }, onEnd: { discordManager in
                                  discordManager.activeSlashCommand = nil
                              }),
-            ActivitySubscene(systemImage: "8.square", title: "Q8 Answer", state: .statement("Apple Developer Center, Singapore")),
+            ActivitySubscene(systemImage: "8.square", title: "Q8 Answer", state: .statement("Sky Blue")),
             ActivitySubscene(systemImage: "8.circle.fill", title: "Q8 Review", state: .submissions("q8")),
         ],
         [
@@ -235,7 +233,7 @@ struct TriviaActivityScene: ActivityScene {
                              }, onEnd: { discordManager in
                                  discordManager.activeSlashCommand = nil
                              }),
-            ActivitySubscene(systemImage: "9.square", title: "Q9 Answer", state: .statement("1.289072, 103.856147")),
+            ActivitySubscene(systemImage: "9.square", title: "Q9 Answer", state: .statement("1.305800, 103.904861")),
             ActivitySubscene(systemImage: "9.circle.fill", title: "Q9 Review", state: .submissions("q9")),
         ],
         [
@@ -246,7 +244,7 @@ struct TriviaActivityScene: ActivityScene {
                              }, onEnd: { discordManager in
                                  discordManager.activeSlashCommand = nil
                              }),
-            ActivitySubscene(systemImage: "10.square", title: "Q10 Answer", state: .statement("17")),
+            ActivitySubscene(systemImage: "10.square", title: "Q10 Answer", state: .statement("24")),
             ActivitySubscene(systemImage: "10.circle.fill", title: "Q10 Review", state: .submissions("q10")),
         ],
         [
@@ -261,14 +259,14 @@ struct TriviaActivityScene: ActivityScene {
             ActivitySubscene(systemImage: "11.circle.fill", title: "Q11 Review", state: .submissions("q11")),
         ],
         [
-            ActivitySubscene(systemImage: "12.circle", title: "Q12: Middle Name",
-                             state: .trivia(45, "What is Taylor's middle name?", 12, nil),
+            ActivitySubscene(systemImage: "12.circle", title: "Q12: Suzuki Swift",
+                             state: .trivia(45, "What is the engine capacity of the latest Swift? (in cc)", 12, nil),
                              onStart: { discordManager in
                                  discordManager.activeSlashCommand = "q12"
                              }, onEnd: { discordManager in
                                  discordManager.activeSlashCommand = nil
                              }),
-            ActivitySubscene(systemImage: "12.square", title: "Q12 Answer", state: .statement("Alison")),
+            ActivitySubscene(systemImage: "12.square", title: "Q12 Answer", state: .statement("1197")),
             ActivitySubscene(systemImage: "12.circle.fill", title: "Q12 Review", state: .submissions("q12")),
         ],
         [
@@ -283,25 +281,25 @@ struct TriviaActivityScene: ActivityScene {
             ActivitySubscene(systemImage: "13.circle.fill", title: "Q13 Review", state: .submissions("q13")),
         ],
         [
-            ActivitySubscene(systemImage: "14.circle", title: "Q14: First Taylor's Version",
-                             state: .trivia(45, "What is the first Taylor's Version album?", 14, nil),
+            ActivitySubscene(systemImage: "14.circle", title: "Q14: DBS SWIFT Code",
+                             state: .trivia(45, "What is the SWIFT code for DBS?", 14, nil),
                              onStart: { discordManager in
                                  discordManager.activeSlashCommand = "q14"
                              }, onEnd: { discordManager in
                                  discordManager.activeSlashCommand = nil
                              }),
-            ActivitySubscene(systemImage: "14.square", title: "Q14 Answer", state: .statement("Fearless")),
+            ActivitySubscene(systemImage: "14.square", title: "Q14 Answer", state: .statement("DBSSSGSG")),
             ActivitySubscene(systemImage: "14.circle.fill", title: "Q14 Review", state: .submissions("q14")),
         ],
         [
-            ActivitySubscene(systemImage: "15.circle", title: "Q15: Birth Year",
-                             state: .trivia(45, "When was Taylor born?", 15, nil),
+            ActivitySubscene(systemImage: "15.circle", title: "Q15: Genus of Common Swift",
+                             state: .trivia(45, "What is the genus of a common swift?", 15, nil),
                              onStart: { discordManager in
                                  discordManager.activeSlashCommand = "q15"
                              }, onEnd: { discordManager in
                                  discordManager.activeSlashCommand = nil
                              }),
-            ActivitySubscene(systemImage: "15.square", title: "Q15 Answer", state: .statement("1989")),
+            ActivitySubscene(systemImage: "15.square", title: "Q15 Answer", state: .statement("*Apus*")),
             ActivitySubscene(systemImage: "15.circle.fill", title: "Q15 Review", state: .submissions("q15")),
         ]
     ].flatMap {

@@ -29,6 +29,22 @@ struct WelcomeActivityScene: ActivityScene {
                             Pointer(systemName: "bubble.left.and.text.bubble.right.fill", title: "Let everyone have a say!", color: .blue),
                             Pointer(systemName: "balloon.2.fill", title: "Have Fun!", color: .red),
                             Pointer(systemName: "trophy.fill", title: "Prizes may be available!", color: .yellow)
-                         ]))
+                         ])),
+        ActivitySubscene(systemImage: "hand.wave",
+                         title: "Group Name Title",
+                         state: .activityTitle("Maniac Moniker Making", "ACTIVITY 0")),
+        ActivitySubscene(systemImage: "character.textbox",
+                         title: "Group Name Brief",
+                         state: .pointers([
+                            Pointer(systemName: "ruler", title: "Each group gets a randomly generated rule", color: .green),
+                            Pointer(systemName: "character.textbox", title: "Come up with a group name that adheres to the rule", color: .indigo),
+                            Pointer(systemName: "square.and.arrow.up", title: "Share it!", color: .mint)
+                         ])),
+        ActivitySubscene(systemImage: "textformat.characters",
+                         title: "Naming Time!",
+                         state: .timer(.init(content: .wordsList, endDate: .now))),
+        ActivitySubscene(systemImage: "character.textbox",
+                         title: "Group Name Brief",
+                         state: .statement("Share your group names!"))
     ]
 }

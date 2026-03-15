@@ -85,7 +85,7 @@ struct ReviewPresentationGroupView: View {
                     ZStack(alignment: .bottomTrailing) {
                         MapWithPinView(coordinate: location)
                             
-                        Text(label)
+                        Text("\(String(format: "%.2f", label)) KM")
                             .frame(maxWidth: .infinity, alignment: .trailing)
                             .font(.system(size: 18, weight: .light))
                             .padding(16)

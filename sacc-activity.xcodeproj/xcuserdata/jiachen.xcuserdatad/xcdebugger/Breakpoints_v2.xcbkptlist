@@ -7,17 +7,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3F0A0EB6-E17F-4F53-BE76-5DB4D2E16218"
-            shouldBeEnabled = "Yes"
+            uuid = "41DD5294-FD34-4D23-B759-B4080543935E"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "sacc-activity/DiscordManager.swift"
+            filePath = "sacc-activity/Dashboard Views/ActivitySceneDashboardItemButton.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "initialize()"
-            landmarkType = "7">
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

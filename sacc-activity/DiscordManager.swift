@@ -12,18 +12,22 @@ import AsyncHTTPClient
 class DiscordManager: ObservableObject {
     
     @Published var activityGroups = [
-        ActivityGroup(groupName: "twisties"),
-        ActivityGroup(groupName: "pizza"),
-        ActivityGroup(groupName: "mad-developers"),
-        ActivityGroup(groupName: "mewing-dabys"),
-        ActivityGroup(groupName: "fried-chicken"),
-        ActivityGroup(groupName: "ipear"),
-        ActivityGroup(groupName: "i-dont-know"),
-        ActivityGroup(groupName: "noted-with-thanks"),
-        ActivityGroup(groupName: "john"),
-        ActivityGroup(groupName: "bob-the-builder"),
-        ActivityGroup(groupName: "anything-ah-anything"),
-        ActivityGroup(groupName: "half-functional")
+        ActivityGroup(groupName: "1am"),
+        ActivityGroup(groupName: "2am"),
+        ActivityGroup(groupName: "3am"),
+        ActivityGroup(groupName: "4am"),
+        ActivityGroup(groupName: "5am"),
+        ActivityGroup(groupName: "6am"),
+        ActivityGroup(groupName: "7am"),
+        ActivityGroup(groupName: "8am"),
+        ActivityGroup(groupName: "1pm"),
+        ActivityGroup(groupName: "2pm"),
+        ActivityGroup(groupName: "3pm"),
+        ActivityGroup(groupName: "4pm"),
+        ActivityGroup(groupName: "5pm"),
+        ActivityGroup(groupName: "6pm"),
+        ActivityGroup(groupName: "7pm"),
+        ActivityGroup(groupName: "8pm")
     ]
     
     @Published var presentedSceneIDs: Set<UUID> = []
@@ -62,7 +66,7 @@ class DiscordManager: ObservableObject {
     func initialize() async {
         
         let httpClient = HTTPClient(eventLoopGroupProvider: .singleton)
-
+        
         self.bot = await BotGatewayManager(
             eventLoopGroup: httpClient.eventLoopGroup,
             httpClient: httpClient,
@@ -74,9 +78,9 @@ class DiscordManager: ObservableObject {
             intents: Gateway.Intent.allCases
         )
         
-        await bot?.connect()
-        
         await setUpSlashCommands()
+        
+        await bot?.connect()
         
         for await event in await bot!.events {
             EventHandler(event: event, client: bot!.client, activeCommand: activeSlashCommand) { [self] (interaction, applicationCommand) in
@@ -109,7 +113,9 @@ class DiscordManager: ObservableObject {
                                                                contents: .text(value)))
                         }
                     }
-                case "q1", "q8", "q11", "q12", "q14":
+                    
+#warning("UPDATE THIS")
+                case "q1", "q8", "q11", "q14", "q15":
                     guard let value = applicationCommand.options?.first?.value?.asString else { return }
                     Task {
                         await MainActor.run {
@@ -118,7 +124,7 @@ class DiscordManager: ObservableObject {
                                                                contents: .text(value)))
                         }
                     }
-                case "q2", "q3", "q4", "q5", "q6", "q7", "q10", "q13", "q15":
+                case "q2", "q3", "q4", "q5", "q6", "q7", "q10", "q12", "q13":
                     guard let value = try? applicationCommand.options?.first?.value?.requireInt() else { return }
                     
                     Task {
@@ -160,11 +166,11 @@ class DiscordManager: ObservableObject {
                 case "q9":
                     guard let options = applicationCommand.options,
                           options.count == 2,
-                            let latitude = try? options[0].requireDouble(),
-                            let longitude = try? options[1].requireDouble() else { return }
+                          let latitude = (try? options[0].requireDouble()) ?? toDouble(value: try? options[0].requireInt()),
+                          let longitude = (try? options[1].requireDouble()) ?? toDouble(value: try? options[1].requireInt()) else { return }
                     
                     let coords = [
-                        "q9": (1.289072, 103.856147)
+                        "q9": (1.305800, 103.904861)
                     ]
                     
                     let distance = haversineDistance(coord1: (latitude: latitude, longitude: longitude), coord2: coords[applicationCommand.name]!)
@@ -190,6 +196,14 @@ class DiscordManager: ObservableObject {
                 }
                 
             }.handle()
+        }
+    }
+    
+    func toDouble(value: Int?) -> Double? {
+        if let value = value {
+            return Double(value)
+        } else {
+            return nil
         }
     }
     
@@ -228,22 +242,26 @@ struct EventHandler: GatewayEventHandler, @unchecked Sendable {
         switch interaction.data {
         case let .applicationCommand(applicationCommand):
             let groups = [
-                "twisties",
-                "pizza",
-                "mad-developers",
-                "mewing-dabys",
-                "fried-chicken",
-                "ipear",
-                "i-dont-know",
-                "noted-with-thanks",
-                "john",
-                "bob-the-builder",
-                "anything-ah-anything",
-                "half-functional"
+                "1am",
+                "2am",
+                "3am",
+                "4am",
+                "5am",
+                "6am",
+                "7am",
+                "8am",
+                "1pm",
+                "2pm",
+                "3pm",
+                "4pm",
+                "5pm",
+                "6pm",
+                "7pm",
+                "8pm"
             ]
             
             guard let channelName = interaction.channel?.name,
-                  groups.contains(channelName) || channelName == "bot-logging" else {
+                  groups.contains(channelName) || channelName == "bot-testing" else {
                 try await client.createInteractionResponse(
                     id: interaction.id,
                     token: interaction.token,

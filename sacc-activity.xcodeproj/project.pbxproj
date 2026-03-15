@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3221C2232D87374800F8084A /* NIO in Frameworks */ = {isa = PBXBuildFile; productRef = 3221C2222D87374800F8084A /* NIO */; };
+		3221C2252D87374800F8084A /* NIOConcurrencyHelpers in Frameworks */ = {isa = PBXBuildFile; productRef = 3221C2242D87374800F8084A /* NIOConcurrencyHelpers */; };
+		3221C2272D87374800F8084A /* NIOCore in Frameworks */ = {isa = PBXBuildFile; productRef = 3221C2262D87374800F8084A /* NIOCore */; };
+		3221C2292D87374800F8084A /* NIOEmbedded in Frameworks */ = {isa = PBXBuildFile; productRef = 3221C2282D87374800F8084A /* NIOEmbedded */; };
+		3221C22B2D87374800F8084A /* NIOFoundationCompat in Frameworks */ = {isa = PBXBuildFile; productRef = 3221C22A2D87374800F8084A /* NIOFoundationCompat */; };
+		3221C22D2D87374800F8084A /* NIOHTTP1 in Frameworks */ = {isa = PBXBuildFile; productRef = 3221C22C2D87374800F8084A /* NIOHTTP1 */; };
+		3221C22F2D87374800F8084A /* NIOPosix in Frameworks */ = {isa = PBXBuildFile; productRef = 3221C22E2D87374800F8084A /* NIOPosix */; };
+		3221C2312D87374800F8084A /* NIOTLS in Frameworks */ = {isa = PBXBuildFile; productRef = 3221C2302D87374800F8084A /* NIOTLS */; };
+		3221C2332D87374800F8084A /* NIOTestUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 3221C2322D87374800F8084A /* NIOTestUtils */; };
+		3221C2352D87374800F8084A /* NIOWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 3221C2342D87374800F8084A /* NIOWebSocket */; };
 		324E1EB12B06793400E57028 /* PresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324E1EB02B06793400E57028 /* PresentationView.swift */; };
 		324E1EB62B067AC300E57028 /* ActivityTitlePresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324E1EB52B067AC300E57028 /* ActivityTitlePresentationView.swift */; };
 		324E1EB82B067BC900E57028 /* SectionPresentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324E1EB72B067BC900E57028 /* SectionPresentationView.swift */; };
@@ -89,14 +99,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3221C2232D87374800F8084A /* NIO in Frameworks */,
 				327129C42B0255BA001CE562 /* DiscordHTTP in Frameworks */,
+				3221C22B2D87374800F8084A /* NIOFoundationCompat in Frameworks */,
+				3221C22D2D87374800F8084A /* NIOHTTP1 in Frameworks */,
 				327129C82B0255BA001CE562 /* DiscordUtilities in Frameworks */,
+				3221C2332D87374800F8084A /* NIOTestUtils in Frameworks */,
+				3221C2292D87374800F8084A /* NIOEmbedded in Frameworks */,
 				327129C62B0255BA001CE562 /* DiscordModels in Frameworks */,
 				327129C22B0255BA001CE562 /* DiscordGateway in Frameworks */,
 				324E1ECA2B06B84300E57028 /* Algorithms in Frameworks */,
 				327129C02B0255BA001CE562 /* DiscordCore in Frameworks */,
+				3221C2352D87374800F8084A /* NIOWebSocket in Frameworks */,
+				3221C22F2D87374800F8084A /* NIOPosix in Frameworks */,
 				327129BE2B0255BA001CE562 /* DiscordBM in Frameworks */,
 				327129BC2B0255BA001CE562 /* DiscordAuth in Frameworks */,
+				3221C2272D87374800F8084A /* NIOCore in Frameworks */,
+				3221C2252D87374800F8084A /* NIOConcurrencyHelpers in Frameworks */,
+				3221C2312D87374800F8084A /* NIOTLS in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +227,16 @@
 				327129C52B0255BA001CE562 /* DiscordModels */,
 				327129C72B0255BA001CE562 /* DiscordUtilities */,
 				324E1EC92B06B84300E57028 /* Algorithms */,
+				3221C2222D87374800F8084A /* NIO */,
+				3221C2242D87374800F8084A /* NIOConcurrencyHelpers */,
+				3221C2262D87374800F8084A /* NIOCore */,
+				3221C2282D87374800F8084A /* NIOEmbedded */,
+				3221C22A2D87374800F8084A /* NIOFoundationCompat */,
+				3221C22C2D87374800F8084A /* NIOHTTP1 */,
+				3221C22E2D87374800F8084A /* NIOPosix */,
+				3221C2302D87374800F8084A /* NIOTLS */,
+				3221C2322D87374800F8084A /* NIOTestUtils */,
+				3221C2342D87374800F8084A /* NIOWebSocket */,
 			);
 			productName = "sacc-activity";
 			productReference = 32F84EA82B01E6D00068BFE6 /* sacc-activity.app */;
@@ -239,6 +269,7 @@
 			packageReferences = (
 				327129BA2B0255BA001CE562 /* XCRemoteSwiftPackageReference "DiscordBM" */,
 				324E1EC82B06B84300E57028 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+				3221C2212D87374800F8084A /* XCRemoteSwiftPackageReference "swift-nio" */,
 			);
 			productRefGroup = 32F84EA92B01E6D00068BFE6 /* Products */;
 			projectDirPath = "";
@@ -429,7 +460,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"sacc-activity/Preview Content\"";
-				DEVELOPMENT_TEAM = W2HPZZH84P;
+				DEVELOPMENT_TEAM = XL5JK4F896;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -439,7 +470,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "app.jiachen.sacc-activity";
+				PRODUCT_BUNDLE_IDENTIFIER = "app.swiftin.sacc-activity";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -456,7 +487,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"sacc-activity/Preview Content\"";
-				DEVELOPMENT_TEAM = W2HPZZH84P;
+				DEVELOPMENT_TEAM = XL5JK4F896;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -466,7 +497,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "app.jiachen.sacc-activity";
+				PRODUCT_BUNDLE_IDENTIFIER = "app.swiftin.sacc-activity";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -497,6 +528,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3221C2212D87374800F8084A /* XCRemoteSwiftPackageReference "swift-nio" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-nio.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.81.0;
+			};
+		};
 		324E1EC82B06B84300E57028 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apple/swift-algorithms.git";
@@ -509,13 +548,63 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/DiscordBM/DiscordBM";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.13.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3221C2222D87374800F8084A /* NIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3221C2212D87374800F8084A /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIO;
+		};
+		3221C2242D87374800F8084A /* NIOConcurrencyHelpers */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3221C2212D87374800F8084A /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOConcurrencyHelpers;
+		};
+		3221C2262D87374800F8084A /* NIOCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3221C2212D87374800F8084A /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOCore;
+		};
+		3221C2282D87374800F8084A /* NIOEmbedded */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3221C2212D87374800F8084A /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOEmbedded;
+		};
+		3221C22A2D87374800F8084A /* NIOFoundationCompat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3221C2212D87374800F8084A /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOFoundationCompat;
+		};
+		3221C22C2D87374800F8084A /* NIOHTTP1 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3221C2212D87374800F8084A /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOHTTP1;
+		};
+		3221C22E2D87374800F8084A /* NIOPosix */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3221C2212D87374800F8084A /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOPosix;
+		};
+		3221C2302D87374800F8084A /* NIOTLS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3221C2212D87374800F8084A /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOTLS;
+		};
+		3221C2322D87374800F8084A /* NIOTestUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3221C2212D87374800F8084A /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOTestUtils;
+		};
+		3221C2342D87374800F8084A /* NIOWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3221C2212D87374800F8084A /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIOWebSocket;
+		};
 		324E1EC92B06B84300E57028 /* Algorithms */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 324E1EC82B06B84300E57028 /* XCRemoteSwiftPackageReference "swift-algorithms" */;

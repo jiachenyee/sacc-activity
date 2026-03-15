@@ -15,9 +15,11 @@ struct FlagRaisingLeaderboardPresentationView: View {
         Array(discordManager.activityGroups.sorted(by: { $0.points > $1.points }))
     }
     
+    var namespace: Namespace.ID
+    
     var body: some View {
         VStack {
-            ForEach(Array(sortedGroups.enumerated()), id: \.offset) { (index, group) in
+            ForEach(Array(sortedGroups.enumerated()), id: \.element.groupName) { (index, group) in
                 let size = sizeFor(rank: index)
                 
                 HStack {
@@ -34,9 +36,11 @@ struct FlagRaisingLeaderboardPresentationView: View {
                     .font(.system(size: size*0.8))
                     
                     Text(group.groupName)
+                        .matchedGeometryEffect(id: "\(group).name", in: namespace)
                     Spacer()
                     Text("\(group.points)")
                         .contentTransition(.numericText())
+                        .matchedGeometryEffect(id: "\(group).points", in: namespace)
                 }
                 .bold()
                 .font(.system(size: size))
@@ -75,8 +79,4 @@ struct FlagRaisingLeaderboardPresentationView: View {
         default: nil // everything else
         }
     }
-}
-
-#Preview {
-    FlagRaisingLeaderboardPresentationView()
 }

@@ -13,45 +13,63 @@ struct ReviewPresentationView: View {
     var submissions: [Submission]
     
     let morningGroups = [
-        "twisties",
-        "pizza",
-        "mad-developers",
-        "mewing-dabys",
-        "fried-chicken",
-        "ipear"
+        "1am",
+        "2am",
+        "3am",
+        "4am",
+        "5am",
+        "6am",
+        "7am",
+        "8am"
     ]
     
     let afternoonGroups = [
-        "i-dont-know",
-        "noted-with-thanks",
-        "john",
-        "bob-the-builder",
-        "anything-ah-anything",
-        "half-functional"
+        "1pm",
+        "2pm",
+        "3pm",
+        "4pm",
+        "5pm",
+        "6pm",
+        "7pm",
+        "8pm"
     ]
     
     var body: some View {
         ScrollView {
             VStack(spacing: 64) {
                 HStack(spacing: 64) {
-                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "twisties")
-                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "pizza")
-                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "mad-developers")
+                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "1am")
+                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "2am")
+                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "3am")
                 }
                 HStack(spacing: 64) {
-                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "mewing-dabys")
-                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "fried-chicken")
-                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "ipear")
+                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "4am")
+                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "5am")
+                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "6am")
                 }
                 HStack(spacing: 64) {
-                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "i-dont-know")
-                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "noted-with-thanks")
-                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "john")
+                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "7am")
+                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "8am")
+                    RoundedRectangle(cornerRadius: 21)
+                        .frame(width: 534, height: 254)
+                        .opacity(0)
                 }
                 HStack(spacing: 64) {
-                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "bob-the-builder")
-                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "anything-ah-anything")
-                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "half-functional")
+                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "1pm")
+                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "2pm")
+                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "3pm")
+                }
+                HStack(spacing: 64) {
+                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "4pm")
+                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "5pm")
+                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "6pm")
+                }
+                HStack(spacing: 64) {
+                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "7pm")
+                    ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "8pm")
+                    RoundedRectangle(cornerRadius: 21)
+                        .frame(width: 534, height: 254)
+                        .opacity(0)
                 }
             }
             .padding(95)

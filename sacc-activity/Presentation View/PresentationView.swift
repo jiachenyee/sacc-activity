@@ -34,7 +34,7 @@ struct PresentationView: View {
             case .submissions(let activity):
                 ReviewPresentationView(activity: activity, submissions: discordManager.submissions)
             case .leaderboards:
-                FlagRaisingLeaderboardPresentationView()
+                FlagRaisingLeaderboardPresentationView(namespace: namespace)
             case .image(let nsImage):
                 ImagePresentationView(image: nsImage)
             case .words:
