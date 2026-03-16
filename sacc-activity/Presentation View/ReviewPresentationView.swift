@@ -56,22 +56,16 @@ struct ReviewPresentationView: View {
                 }
                 HStack(spacing: 64) {
                     ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "1pm")
-                }
-                HStack(spacing: 64) {
                     ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "2pm")
                     ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "3pm")
                 }
                 HStack(spacing: 64) {
                     ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "4pm")
-                }
-                HStack(spacing: 64) {
                     ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "5pm")
                     ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "6pm")
                 }
                 HStack(spacing: 64) {
                     ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "7pm")
-                }
-                HStack(spacing: 64) {
                     ReviewPresentationGroupView(activity: activity, submissions: submissions, groupName: "8pm")
                     RoundedRectangle(cornerRadius: 21)
                         .frame(width: 534, height: 254)

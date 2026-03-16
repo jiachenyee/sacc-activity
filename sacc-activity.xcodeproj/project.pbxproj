@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D2547FA2F6776BE00B6A08F /* Discord.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D2547F92F6776BE00B6A08F /* Discord.plist */; };
 		3221C2232D87374800F8084A /* NIO in Frameworks */ = {isa = PBXBuildFile; productRef = 3221C2222D87374800F8084A /* NIO */; };
 		3221C2252D87374800F8084A /* NIOConcurrencyHelpers in Frameworks */ = {isa = PBXBuildFile; productRef = 3221C2242D87374800F8084A /* NIOConcurrencyHelpers */; };
 		3221C2272D87374800F8084A /* NIOCore in Frameworks */ = {isa = PBXBuildFile; productRef = 3221C2262D87374800F8084A /* NIOCore */; };
@@ -58,7 +59,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1D2547F22F6715D000B6A08F /* Discord.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Discord.plist; sourceTree = "<group>"; };
+		1D2547F92F6776BE00B6A08F /* Discord.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Discord.plist; sourceTree = "<group>"; };
 		324E1EB02B06793400E57028 /* PresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationView.swift; sourceTree = "<group>"; };
 		324E1EB52B067AC300E57028 /* ActivityTitlePresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTitlePresentationView.swift; sourceTree = "<group>"; };
 		324E1EB72B067BC900E57028 /* SectionPresentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionPresentationView.swift; sourceTree = "<group>"; };
@@ -185,7 +186,7 @@
 				327129D52B03DC82001CE562 /* AppIdeaActivityScene.swift */,
 				327129D72B03DCD7001CE562 /* TriviaActivityScene.swift */,
 				326B3F902B085686008113FD /* ClosingActivityScene.swift */,
-				1D2547F22F6715D000B6A08F /* Discord.plist */,
+				1D2547F92F6776BE00B6A08F /* Discord.plist */,
 				32F84EAF2B01E6D10068BFE6 /* Assets.xcassets */,
 				32F84EB42B01E6D10068BFE6 /* sacc_activity.entitlements */,
 				32F84EB12B01E6D10068BFE6 /* Preview Content */,
@@ -286,7 +287,7 @@
 			files = (
 				32F84EB32B01E6D10068BFE6 /* Preview Assets.xcassets in Resources */,
 				32F84EB02B01E6D10068BFE6 /* Assets.xcassets in Resources */,
-				1D2547F32F6715D100B6A08F /* Discord.plist in Resources */,
+				1D2547FA2F6776BE00B6A08F /* Discord.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

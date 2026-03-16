@@ -149,14 +149,14 @@ struct TriviaActivityScene: ActivityScene {
             ActivitySubscene(systemImage: "1.circle.fill", title: "Q1 Review", state: .submissions("q1")),
         ],
         [
-            ActivitySubscene(systemImage: "2.circle", title: "Q2: Apple Stores",
-                             state: .trivia(45, "How many Apple Stores are there in Singapore?", 2, nil),
+            ActivitySubscene(systemImage: "2.circle", title: "Q2: Apple50",
+                             state: .trivia(45, "When was Apple founded?", 2, nil),
                              onStart: { discordManager in
                                  discordManager.activeSlashCommand = "q2"
                              }, onEnd: { discordManager in
                                  discordManager.activeSlashCommand = nil
                              }),
-            ActivitySubscene(systemImage: "2.square", title: "Q2 Answer", state: .statement("3")),
+            ActivitySubscene(systemImage: "2.square", title: "Q2 Answer", state: .statement("April 1st, 1976")),
             ActivitySubscene(systemImage: "2.circle.fill", title: "Q2 Review", state: .submissions("q2")),
         ],
         [

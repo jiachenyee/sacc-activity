@@ -30,14 +30,33 @@ struct TimerPresentationView: View {
         ZStack {
             switch timerInput.content {
             case .wordsList:
-                VStack(spacing: 0) {
+                VStack(spacing: 30) {
                     Text("Send your group name into your channel.")
                         .font(.system(size: 52, weight: .medium))
                         .multilineTextAlignment(.center)
-                    
-                    Image(.names)
-                        .resizable()
-                        .scaledToFit()
+
+                    VStack(alignment: .leading) {
+                        HStack(spacing: 0) {
+                            Text("1. ")
+                                .monospaced()
+                            Text("Your group name must contain an item / object.")
+                        }
+                        .font(.largeTitle)
+
+                        HStack(spacing: 0) {
+                            Text("2. ")
+                                .monospaced()
+                            Text("Your group name must contain an adjective.")
+                        }
+                        .font(.largeTitle)
+
+                        HStack(spacing: 0) {
+                            Text("3. ")
+                                .monospaced()
+                            Text("Your group name must contain a word that rhymes with your mentor’s name.")
+                        }
+                        .font(.largeTitle)
+                    }
                 }
                 .padding(.vertical, 95)
             case .pointers(let array):

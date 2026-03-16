@@ -36,8 +36,8 @@ struct WelcomeActivityScene: ActivityScene {
         ActivitySubscene(systemImage: "character.textbox",
                          title: "Group Name Brief",
                          state: .pointers([
-                            Pointer(systemName: "ruler", title: "Each group gets a randomly generated rule", color: .green),
-                            Pointer(systemName: "character.textbox", title: "Come up with a group name that adheres to the rule", color: .indigo),
+                            Pointer(systemName: "ruler", title: "There'll be limitations to what you can name your group.", color: .green),
+                            Pointer(systemName: "character.textbox", title: "Come up with a group name that works within the limits.", color: .indigo),
                             Pointer(systemName: "square.and.arrow.up", title: "Share it!", color: .mint)
                          ])),
         ActivitySubscene(systemImage: "textformat.characters",
